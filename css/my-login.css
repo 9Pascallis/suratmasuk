@@ -3,6 +3,7 @@ html,body {
 }
 
 body.my-login-page {
+	
 	background-color: #f7f9fb;
 	font-size: 14px;
 }
@@ -30,10 +31,11 @@ body.my-login-page {
 
 .my-login-page .card {
 	border-color: transparent;
-	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	box-shadow: 0 4px 8px;
 }
 
 .my-login-page .card.fat {
+	box-shadow: 0 3px 15px #888888;
 	padding: 10px;
 }
 
