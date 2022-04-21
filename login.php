@@ -20,10 +20,10 @@
 							</div>
 							<h4 class="text-center">Login</h4>
 							<br>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<form action="proses-login.php" method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="text">Username</label>
-									<input id="text" type="text" class="form-control" name="text" value="" required autofocus>
+									<input  type="text" class="form-control" name="username" value="" required autofocus>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -32,7 +32,7 @@
 									<label for="password">Password
 									</label>
 									
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<input  type="password" class="form-control"  name="password" required data-eye>
 								    <div class="invalid-feedback">
 								    	Password is required
 							    	</div>
@@ -46,7 +46,7 @@
 								</div>
 
 								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
+									<button type="submit" name="login" class="btn btn-primary btn-block">
 										Login
 									</button>
 								</div>
