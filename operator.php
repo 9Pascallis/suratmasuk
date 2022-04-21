@@ -1,4 +1,5 @@
 <?php
+require 'database/db.php';
 session_start();
 ?>
 
@@ -48,8 +49,8 @@ $(document).ready(function(){
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th width="50px">No</th>
-                        <th width="120px">No Agenda</th>
+                        <th width="10px">No</th>
+                        <th width="10px">No Agenda</th>
                         <th width="10px">Tanggal Agenda</th>
                         <th width="10px">Tingkat Keamanan</th>
                         <th width="10px">Tanggal Surat</th>
@@ -57,24 +58,28 @@ $(document).ready(function(){
                         <th>Asal Surat</th>
                         <th>Perihal</th>
                         <th>Lampiran</th>
-                        <th>Status</th>
                         <th>File</th>
-                        <th width="120px">Actions</th>
+                        <th width="280px">Actions</th>
                         <th width="50px">Status</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                    $no=1;
+                    $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk");
+                    while($data = mysqli_fetch_array($tampil)){
+
+                ?>
                     <tr>
-                        <td>235</td>
-                        <td>20/04/22</td>
-                        <td>Biasa</td>
-                        <td>19/04/22</td>
-                        <td>0</td>
-                        <td>0.</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td><?=$data['id']?></td>
+                        <td><?=$data['no_agenda']?></td>
+                        <td><?=$data['tgl_agenda']?></td>
+                        <td><?=$data['tk_keamanan']?></td>
+                        <td><?=$data['tgl_surat']?></td>
+                        <td><?=$data['no_surat']?></td>
+                        <td><?=$data['asal_surat']?></td>
+                        <td><?=$data['perihal']?></td>
+                        <td><?=$data['lampiran']?></td>
                         <td>
                             <a href="#" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
@@ -93,7 +98,9 @@ $(document).ready(function(){
                             </div>
                         </td>
                     </tr>
-      
+                <?php
+                    };
+                ?>        
                 </tbody>
             </table>
             
