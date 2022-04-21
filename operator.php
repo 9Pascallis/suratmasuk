@@ -49,7 +49,7 @@ $(document).ready(function(){
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th width="10px">No</th>
+                        <th width="50px">No</th>
                         <th width="10px">No Agenda</th>
                         <th width="10px">Tanggal Agenda</th>
                         <th width="10px">Tingkat Keamanan</th>
@@ -59,7 +59,7 @@ $(document).ready(function(){
                         <th>Perihal</th>
                         <th>Lampiran</th>
                         <th>File</th>
-                        <th width="280px">Actions</th>
+                        <th width="300px">Actions</th>
                         <th width="50px">Status</th>
                     </tr>
                 </thead>
