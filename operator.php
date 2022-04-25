@@ -35,7 +35,7 @@ $(document).ready(function(){
 <div class="containerbox">
     <div class="table-responsive">
         <div class="table-wrapper">
-            <div class="table-title">
+            <div class="table-title">				
                 <div class="row">
                     <div class="col-sm-8"><h2>Bulan Maret 2022</h2></div>
                     <div class="col-sm-4">
