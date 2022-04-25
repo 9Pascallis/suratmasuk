@@ -37,12 +37,15 @@ $(document).ready(function(){
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Bulan Maret 2022</h2></div>
+                    <div class="col-sm-8"><h2>Bulan Maret 2022</h2></div> 
                     <div class="col-sm-4">
-                        <div class="search-box">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
-                        </div>
+                    <form action="" method="post">
+                    <div class="input-group">
+                        <input type="text" name="keyword" class="form-control" placeholder="masukan kata kunci pencarian" autocomplete="off" autofocus>
+                        <div class="input-group-append"></div>
+                        <button type="submit" name="cari" class="btn btn-secondary pl-4 pr-4">Cari</button>
+                    </div>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -65,8 +68,32 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
                 <?php
-                    $no=1;
-                    $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk");
+                    $dataPerHal=30;
+                    $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk"));
+                    $banyakHal=ceil($banyakData/$dataPerHal);
+                        if(isset($_GET['halaman'])){
+                            $halAktif=$_GET['halaman'];
+                        }else{
+                            $halAktif=1;
+                        }
+
+                    $dataawal=($halAktif*$dataPerHal)-$dataPerHal;
+                    
+                    // <<<<<<<<<<<<<<<<<<<<<<<SEARCH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    if(isset($_POST['cari'])){
+                        $keyword = $_POST['keyword'];
+                        $tampil = mysqli_query($conn,"SELECT*FROM surat_masuk WHERE no_agenda LIKE'%$keyword' OR
+                        tk_keamanan LIKE '%$keyword' OR
+                        tgl_agenda LIKE '%$keyword' OR
+                        tgl_surat LIKE '%$keyword%' OR
+                        asal_surat LIKE '%$keyword' 
+                        LIMIT $dataawal, $dataPerHal
+                        ");
+                      }
+                      else{
+                        $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk LIMIT $dataawal, $dataPerHal ");
+                          }
+
                     while($data = mysqli_fetch_array($tampil)){
 
                 ?>
@@ -103,7 +130,42 @@ $(document).ready(function(){
                 ?>        
                 </tbody>
             </table>
+            <nav>
+            <ul class="pagination justify-content-center">
+            <!-- ============Previous============ -->
+            <?php
+            if($halAktif<=1){
+            ?>
+            <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
+            <?php
+            }else{?>
+            <li class="page-item"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
+            <?php
+            }
+            ?>
+            <!-- ==============end Previous=============== -->
             
+            <?php for($i=1; $i<=$banyakHal; $i++){
+            ?>
+            <li class="pge-item"><a href="?halaman=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
+            <?php
+            }//end for
+            ?>
+
+            <!-- ============Next============ -->
+            <?php
+            if($halAktif >= $banyakHal){
+            ?>
+            <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
+            <?php
+            }else{?>
+            <li class="page-item"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
+            <?php
+            }
+            ?>
+            <!-- ==============end Next=============== -->
+            </ul>
+            </nav>
         </div>
     </div>  
 </div>   
