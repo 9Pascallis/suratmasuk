@@ -35,18 +35,27 @@ $(document).ready(function(){
 <div class="containerbox">
     <div class="table-responsive">
         <div class="table-wrapper">
-            <div class="table-title">				
+            <div class="table-title">	
+            <h4><p class="text-center">Bulan Maret 2022</p></h4>
+            <br>
                 <div class="row">
-                    <div class="col-sm-8"><h2>Bulan Maret 2022</h2></div> 
-                    <div class="col-sm-4">
-                    <form action="" method="post">
-                    <div class="input-group">
-                        <input type="text" name="keyword" class="form-control" placeholder="masukan kata kunci pencarian" autocomplete="off" autofocus>
-                        <div class="input-group-append"></div>
-                        <button type="submit" name="cari" class="btn btn-secondary pl-4 pr-4">Cari</button>
-                    </div>
-                    </form>
-                    </div>
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <a href="tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
+                                    
+                                </div>
+                            </div>
+                         </div> 
+                        <div class="col-sm-6">
+                            <form action="" method="post">
+                            <div class="input-group">
+                                <input type="text" name="keyword" class="form-control" placeholder="Masukan kata kunci pencarian" autocomplete="off" autofocus>
+                                <div class="input-group-append"></div>
+                                    <button type="submit" name="cari" class="btn btn-secondary pl-4 pr-4">Cari</button>
+                                </div>
+                                </form>
+                        </div>
                 </div>
             </div>
             <table class="table table-striped table-hover table-bordered">
