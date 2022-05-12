@@ -95,25 +95,33 @@ $(document).ready(function(){
                           }
 
                     while($data = mysqli_fetch_array($tampil)){
-
+                        $idMasuk=$data['id'];
+                        $noAgenda=$data['no_agenda'];
+                        $tglAgenda=$data['tgl_agenda'];
+                        $tk=$data['tk_keamanan'];
+                        $tglSurat=$data['tgl_surat'];
+                        $noSurat=$data['no_surat'];
+                        $asalSurat=$data['asal_surat'];
+                        $per=$data['perihal'];
+                        $lmpr=$data['lampiran'];
                 ?>
                     <tr>
-                        <td><?=$data['id']?></td>
-                        <td><?=$data['no_agenda']?></td>
-                        <td><?=$data['tgl_agenda']?></td>
-                        <td><?=$data['tk_keamanan']?></td>
-                        <td><?=$data['tgl_surat']?></td>
-                        <td><?=$data['no_surat']?></td>
-                        <td><?=$data['asal_surat']?></td>
-                        <td><?=$data['perihal']?></td>
-                        <td><?=$data['lampiran']?></td>
+                        <td><?=$idMasuk?></td>
+                        <td><?=$noAgenda?></td>
+                        <td><?=$tglAgenda?></td>
+                        <td><?=$tk?></td>
+                        <td><?=$tglSurat?></td>
+                        <td><?=$noSurat?></td>
+                        <td><?=$asalSurat?></td>
+                        <td><?=$per?></td>
+                        <td><?=$lmpr?></td>
                         <td>
                             <a href="#" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td>
                             <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href="delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                         <td>
                             <div>
@@ -165,7 +173,7 @@ $(document).ready(function(){
             ?>
             <!-- ==============end Next=============== -->
             </ul>
-            </nav>
+            </nav>            
         </div>
     </div>  
 </div>   
