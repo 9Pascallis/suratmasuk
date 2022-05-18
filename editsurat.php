@@ -12,12 +12,12 @@ session_start();
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Tambah | Surat Masuk</title>
+<title>Edit | Surat Masuk</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/tambah.css">
+<link rel="stylesheet" type="text/css" href="css/edit.css">
 <link rel="shortcut icon" href="img/logo.png" />
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -34,7 +34,7 @@ $(document).ready(function(){
 <!-- Bootstrap Static Header -->
 <div style="background: url(img/bg.jpg)" img src="img/bg.jpg" class="bg-cover text-white">
     <div class="header text-center">
-        <br><h4 class="header1 font-weight-bold">TAMBAH SURAT MASUK</h4>
+        <br><h4 class="header1 font-weight-bold">EDIT SURAT MASUK</h4>
     </div>
 </div>
 
@@ -161,7 +161,7 @@ $(document).ready(function(){
             <br>
             <div class="form-group row">
                 <div class="col-sm-12">
-                <button class="btn btn-primary" name="tambah">Tambah Surat</button>
+                <button class="btn btn-primary" name="tambah">Edit Surat</button>
                 </div>
             </div>
             </form>
