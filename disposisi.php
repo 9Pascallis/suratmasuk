@@ -82,9 +82,9 @@ $(document).ready(function(){
             </div>
             <hr class="new4">
             <div class="header text-center">
-              <br><h5 class="header1 font-weight-bold">Diteruskan Kepada Yth:</h5>
+              <br><h5 class="header1 font-weight-bold" style="color:black;">Diteruskan Kepada Yth:</h5>
             </div>
-            <div class="row">
+            <div class="row" style="color:black;">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-2">
                             <div class="form-check form-check-primary">
@@ -119,9 +119,12 @@ $(document).ready(function(){
                 <div class="col-sm-1"></div>
             </div>
             <br><br>
-            <div class="row">
+            <div class="row" style="color:black;">
                         <div class="col-md-3">
-                        <h4 class="card-title">Tidak Lanjut</h4>
+                        <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" /><h5 class="card-title"><b>Tindak Lanjut</b></h5></label>
+                        </div>
                           <p class="card-description"> Masukkan yang ingin dicentang </p>
                           <div class="form-group">
                             <div class="form-check">
@@ -173,7 +176,10 @@ $(document).ready(function(){
                           </div>
                         </div>
                         <div class="col-md-3">
-                          <h4 class="card-title">Diketahui</h4>
+                        <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" /><h5 class="card-title"><b>Diketahui</b></h5></label>
+                        </div>
                           <p class="card-description"> Masukkan yang ingin dicentang </p>
                           <div class="form-group">
                             <div class="form-check">
@@ -229,7 +235,7 @@ $(document).ready(function(){
                         </div>
                       </div>
 
-            <div class="col-md-12">
+                        <div class="col-md-12" style="color:black;">
                           <p class="card-description"> Catatan khusus: </p>
                           <div class="form-group row">
                             <div class="col-sm-12">
@@ -241,9 +247,11 @@ $(document).ready(function(){
                             </div>
                           </div>
                         </div>
-            
+                        <br>
+                      <div style="text-align:right;">
                         <button class="btn btn-light">Cancel</button>
                           <button type="submit" class="btn btn-primary me-2"> Submit </button>
+                      </div>
             </form>
         </div>
     </div>  
