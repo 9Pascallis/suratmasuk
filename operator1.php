@@ -66,7 +66,7 @@ $(document).ready(function(){
                         <th width="300px">Perihal</th>
                         <th width="50px">Lampiran</th>
                         <th width="150px">Disposisi</th>
-                        <th width="5px">View</th>
+                        <th width="5px">Hasil</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -119,12 +119,12 @@ $(document).ready(function(){
                         <td><?=$per?></td>
                         <td><?=$lmpr?></td>
                         <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="#" class="view" title="Disposisi" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                         <td>
-                            <a href="#" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                         </td>
                     </tr>
                 <?php
