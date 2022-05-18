@@ -8,7 +8,7 @@ session_start();
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Tambah Surat Masuk</title>
+<title>Surat Masuk | Tambah Surat</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -30,7 +30,7 @@ $(document).ready(function(){
 <!-- Bootstrap Static Header -->
 <div style="background: url(img/bg.jpg)" img src="img/bg.jpg" class="bg-cover text-white">
     <div class="header text-center">
-        <br><h4 class="header1 font-weight-bold">Tambah Surat Masuk</h4>
+        <br><h4 class="header1 font-weight-bold">TAMBAH SURAT MASUK</h4>
     </div>
 </div>
 
