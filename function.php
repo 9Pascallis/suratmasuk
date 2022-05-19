@@ -1,5 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "meteojuanda", "Juanda969#%", "tata_usaha");
+require 'database/db.php';
+session_start();
 
 function tanggal_indo($tanggal)
 {
