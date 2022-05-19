@@ -126,7 +126,7 @@ $(document).ready(function(){
                         <td><?=$per?></td>
                         <td><?=$lmpr?></td>
                         <td>
-                            <a href="#" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                            <a href="disposisi.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td>
                             <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
