@@ -43,7 +43,7 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href=""><img src="img/logo.png" style="width:40px;height:40px;"> BMKG <span>JUANDA</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href=""><img src="public/img/logo.png" style="width:40px;height:40px;"> BMKG <span>JUANDA</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
 
