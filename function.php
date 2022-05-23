@@ -1,6 +1,7 @@
 <?php
+
 require 'database/db.php';
-session_start();
+
 
 function tanggal_indo($tanggal)
 {
@@ -112,10 +113,10 @@ function upload()
     $namaFileBaru .= $ekstensiPdf;
 
     //checking if file exsists
-    if (file_exists("../file-pdf/$namaFileBaru")) unlink("../file-pdf/$namaFileBaru");
+    if (file_exists("/berkas/$namaFileBaru")) unlink("berkas/$namaFileBaru");
 
     //Place it into your "uploads" folder mow using the move_uploaded_file() function
-    move_uploaded_file($tmpName, '../file-pdf/' . $namaFileBaru);
+    move_uploaded_file($tmpName, 'berkas/' . $namaFileBaru);
     return $namaFileBaru;
 }
 

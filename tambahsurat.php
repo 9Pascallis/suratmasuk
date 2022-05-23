@@ -1,11 +1,37 @@
 <?php
 
-require 'database/db.php';
-// include "database/db.php";
-// require_once ('modals/m.suratmasuk.php');
-session_start();
+require 'function.php';
+//get last row from database
+$mhs = query("SELECT * FROM surat_masuk ORDER BY id DESC LIMIT 1")[0];
+$last_row = $mhs["no_agenda"];
 
+//cek apakah tombol submit ditekan atau belum
+if (isset($_POST["tambah"])) {
+
+    //cek apaah data berhasil di tambahkan atau tidak
+    //   var_dump($_POST);
+    //  var_dump($_FILES);
+    //  die;
+    if (tambah($_POST) > 0) {
+        echo "
+            <script>
+                alert('data berhasil ditambah');
+                document.location.href = 'operator.php';
+            </script>
+                ";
+    } else {
+       
+        echo "
+            <script>
+                alert('data gagal ditambah!!!');
+                document.location.href = 'operator.php';
+            </script>
+        ";
+    }
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -167,20 +193,20 @@ $(document).ready(function(){
             </form>
             <?php
 
-                        if(isset($_POST['tambah'])){
-                            $namabukti = $_FILES["file_pdf"]["name"];
-                            $lokasibukti = $_FILES["file_pdf"]["tmp_name"];
-                            $namafiks = date("YmdHis").$namabukti;
-                            move_uploaded_file($lokasibukti, "berkas/$namafiks");
-                            // $direktori = "berkas/";
-                            // $file_pdf=$_FILES['file_pdf']['name'];
-                            // move_uploaded_file($_FILES['file_pdf']['tmp_name'],$direktori.$file_pdf);
-                            $conn->query("INSERT INTO surat_masuk (no_agenda,tk_keamanan,tgl_agenda,no_surat,tgl_surat,asal_surat,perihal,lampiran,status_surat,file_pdf)
-                            VALUES('$_POST[no_agenda]','$_POST[tk_keamanan]','$_POST[tgl_agenda]','$_POST[no_surat]','$_POST[tgl_surat]','$_POST[asal_surat]','$_POST[perihal]','$_POST[lampiran]','$_POST[status_surat]','$_POST[file_pdf]')");
+                        // if(isset($_POST['tambah'])){
+                        //     $namabukti = $_FILES["file_pdf"]["name"];
+                        //     $lokasibukti = $_FILES["file_pdf"]["tmp_name"];
+                        //     $namafiks = date("YmdHis").$namabukti;
+                        //     move_uploaded_file($lokasibukti, "berkas/$namafiks");
+                        //     // $direktori = "berkas/";
+                        //     // $file_pdf=$_FILES['file_pdf']['name'];
+                        //     // move_uploaded_file($_FILES['file_pdf']['tmp_name'],$direktori.$file_pdf);
+                        //     $conn->query("INSERT INTO surat_masuk (no_agenda,tk_keamanan,tgl_agenda,no_surat,tgl_surat,asal_surat,perihal,lampiran,status_surat,file_pdf)
+                        //     VALUES('$_POST[no_agenda]','$_POST[tk_keamanan]','$_POST[tgl_agenda]','$_POST[no_surat]','$_POST[tgl_surat]','$_POST[asal_surat]','$_POST[perihal]','$_POST[lampiran]','$_POST[status_surat]','$_POST[file_pdf]')");
 
-                        echo "<script>alert( 'Berhasil Tambah Data' );</script>";
-                        echo "<script>location = 'operator.php';</script>";
-                        }
+                        // echo "<script>alert( 'Berhasil Tambah Data' );</script>";
+                        // echo "<script>location = 'operator.php';</script>";
+                        // }
 
                     ?>
         </div>
