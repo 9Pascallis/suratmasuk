@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SPT Jam | Tata Usaha BMKG</title>
+  <title>SPT Hari | Tata Usaha BMKG</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -72,10 +72,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2><b>Tata Usaha | SPT Jam</b></h2>
+          <h2><b>Tata Usaha | SPT Hari</b></h2>
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>SPT Jam</li>
+            <li>SPT Hari</li>
           </ol>
         </div>
       </div>
@@ -91,7 +91,7 @@
         <div style="text-align:center" >
           <div class="input-field-border-bottom" style="text-align:left" >
           <br>
-          <h3 style="text-align:center"><b> INPUT SPT UNTUK KEGIATAN JAM</b></h3>
+          <h3 style="text-align:center"><b> INPUT SPT UNTUK KEGIATAN HARIAN</b></h3>
           <br><br>
             <label for="text">Nama Lengkap</label>
             <input type="text" placeholder="Masukkan nama lengkap" />
@@ -128,7 +128,15 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group row">
-                        <label for="colFormLabel" class="col-sm-12 col-form-label">Tanggal Berlangsung</label>
+                        <label for="colFormLabel" class="col-sm-12 col-form-label">Tanggal Berangkat</label>
+                        <div class="col-sm-12">
+                        <input type="date" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-12 col-form-label">Tanggal Kembali</label>
                         <div class="col-sm-12">
                         <input type="date" placeholder="">
                         </div>
