@@ -50,7 +50,7 @@
             <li class="dropdown"><a href="#"><span>SPT</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="sptjam.php">SPT Jam</a></li>
-                <li><a href="spthari.php">SPT Harian</a></li>
+                <li><a href="sptharian.php">SPT Harian</a></li>
               </ul>
             </li>
             <li><a class="nav-link" href="https://juanda.jatim.bmkg.go.id/tata-usaha/usulan/login.php">Usulan</a></li>

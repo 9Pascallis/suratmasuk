@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SPT Hari | Tata Usaha BMKG</title>
+  <title>SPT Harian | Tata Usaha BMKG</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,7 +50,7 @@
             <li class="dropdown"><a href="#"><span>SPT</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="sptjam.php">SPT Jam</a></li>
-                <li><a href="spthari.php">SPT Harian</a></li>
+                <li><a href="sptharian.php">SPT Harian</a></li>
               </ul>
             </li>
             <li><a class="nav-link" href="https://juanda.jatim.bmkg.go.id/tata-usaha/usulan/login.php">Usulan</a></li>
@@ -72,10 +72,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2><b>Tata Usaha | SPT Hari</b></h2>
+          <h2><b>Tata Usaha | SPT Harian</b></h2>
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>SPT Hari</li>
+            <li>SPT Harian</li>
           </ol>
         </div>
       </div>
