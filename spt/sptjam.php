@@ -143,7 +143,17 @@
             <input type="checkbox" class="form-check-input" /> Menggunakan SPPD </label>
             <br><br>
             <div style="text-align:right;">
-              <button class="btn btn-warning"style="color:#fff">Cancel</button>
+              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../index.php"style="color:white;">Cancel</a></button>
+              <script>
+                function openDialog() {
+                  let customMsg = "CANCEL DATA SPT JAM";
+                  if (confirm(customMsg)) {
+                    console.log("User clicked YES");
+                  } else {
+                    console.log("User Clicked NO");
+                  }
+                }
+              </script>
               <button type="submit" class="btn btn-primary me-2"> Submit </button>
             </div>
           </div>
@@ -168,7 +178,7 @@
 
 
 
-
+  
   <!-- vendors JS Files -->
   <script src="public/vendors/purecounter/purecounter.js"></script>
   <script src="public/vendors/aos/aos.js"></script>
