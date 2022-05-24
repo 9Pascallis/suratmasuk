@@ -44,8 +44,8 @@
             <li><a class="nav-link" href="../index.php">Home</a></li>
             <li class="dropdown"><a href="#"><span>Surat</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="../login.php">Surat Masuk</a></li>
-                <li><a href="../login.php">Surat Keluar</a></li>
+                <li><a href="../suratmasuk/login.php">Surat Masuk</a></li>
+                <li><a href="../suratmasuk/login.php">Surat Keluar</a></li>
               </ul>
             <li class="dropdown"><a href="#"><span>SPT</span> <i class="bi bi-chevron-down"></i></a>
               <ul>

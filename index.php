@@ -46,8 +46,8 @@
         <ul>
           <li class="dropdown"><a href="#"><span>SPT</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="sptjam.php">SPT Jam</a></li>
-              <li><a href="sptharian.php">SPT Harian</a></li>
+              <li><a href="spt/sptjam.php">SPT Jam</a></li>
+              <li><a href="spt/sptharian.php">SPT Harian</a></li>
             </ul>
           </li>
           <li><a class="nav-link" href="https://juanda.jatim.bmkg.go.id/tata-usaha/usulan/login.php">Usulan</a></li>
@@ -74,13 +74,13 @@
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line"></i>
-            <h3><a href="login.php">Surat Masuk</a></h3>
+            <h3><a href="suratmasuk/login.php">Surat Masuk</a></h3>
           </div>
         </div>
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Surat Keluar</a></h3>
+            <h3><a href="suratmasuk/login.php">Surat Keluar</a></h3>
           </div>
         </div>
         <div class="col-xl-2 col-md-4">

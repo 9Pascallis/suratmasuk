@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="shortcut icon" href="public/img/logo.png" />
+	<link rel="shortcut icon" href="../public/img/logo.png" />
 	<title>Login | Surat Masuk</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="public/css/login.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/login.css">
 </head>
 <body class="login-page">
 	<section class="h-100">
@@ -17,7 +17,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<div class="text-center">
-								<img src="public/img/logo.png" alt="logo" height="50px" width="50px">
+								<img src="../public/img/logo.png" alt="logo" height="50px" width="50px">
 							</div>
 							<h4 class="text-center">Login</h4>
 							<p class="text-center">Surat Masuk</p>
