@@ -27,7 +27,7 @@
   <link href="public/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="public/css/spt.css" rel="stylesheet">
+  <link href="public/css/sptjam.css" rel="stylesheet">
 </head>
 <!--END HEAD-->
 
