@@ -42,8 +42,8 @@ if (isset($_POST["edit"])) {
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="public/css/edit.css">
-<link rel="shortcut icon" href="public/img/logo.png" />
+<link rel="stylesheet" type="text/css" href="../public/css/edit.css">
+<link rel="shortcut icon" href="../public/img/logo.png" />
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -57,7 +57,7 @@ $(document).ready(function(){
 </head>
 <body>
 <!-- Bootstrap Static Header -->
-<div style="background: url(public/img/bg.jpg)" img src="public/img/bg.jpg" class="bg-cover text-white">
+<div style="background: url(../public/img/bg.jpg)" img src="../public/img/bg.jpg" class="bg-cover text-white">
     <div class="header text-center">
         <br><h4 class="header1 font-weight-bold">EDIT SURAT MASUK</h4>
     </div>
