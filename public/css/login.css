@@ -19,7 +19,9 @@ html,body {
 }
 
 body.login-page {
-	background-color: #f7f9fb;
+	background: url("../img/bgfix.jpg") top center;
+	background-size: cover;
+	position: relative;
 	font-size: 14px;
 }
 
