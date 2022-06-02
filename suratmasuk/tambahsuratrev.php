@@ -89,8 +89,8 @@
       <div class="container">
 
         <br><br>
-        <div style="text-align:center" >
-          <div class="input-field-border-bottom" style="text-align:left" >
+        <div style="text-align:center;" >
+          <div class="input-field-border-bottom" style="text-align:left;  height:100%;" >
           <br>
           <h3 style="text-align:center"><b> TAMBAH SURAT MASUK </b></h3>
           <br><br>
