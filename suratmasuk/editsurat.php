@@ -122,6 +122,7 @@ $(document).ready(function(){
           <h2><b>Surat Masuk | Edit Surat</b></h2>
           <ol>
             <li><a href="../index.php">Home</a></li>
+            <li><a href="../suratmasuk/index.php">Surat Masuk</a></li>
             <li>Edit Surat</a></li>
           </ol>
         </div>
@@ -254,7 +255,7 @@ $(document).ready(function(){
             </div>
             <br>
             <div style="text-align:left;">
-              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../index.php"style="color:white;">Cancel</a></button>
+              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../suratmasuk/index.php"style="color:white;">Cancel</a></button>
               <script>
                 function openDialog() {
                   let customMsg = "CANCEL EDIT SURAT";
