@@ -74,7 +74,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2><b>Tata Usaha | SPT Harian</b></h2>
           <ol>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="index.php">SPT</a></li>
             <li>SPT Harian</li>
           </ol>
         </div>
@@ -89,7 +90,7 @@
 
         <br><br>
         <div style="text-align:center" >
-          <div class="input-field-border-bottom" style="text-align:left" >
+          <div class="input-field-border-bottom" style="text-align:left; height:100%;" >
           <br>
           <h3 style="text-align:center"><b> INPUT SPT UNTUK KEGIATAN HARIAN</b></h3>
           <br><br>
