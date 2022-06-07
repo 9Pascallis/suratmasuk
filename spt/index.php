@@ -85,7 +85,7 @@
       <div class="container">
         <br><br>
         <div style="text-align:center" >
-          <div class="input-field-border-bottom bg-warning text-white" style="text-align:left; height:100%; color:black;" >
+          <div class="input-field-border-bottom bg-dark text-white" style="text-align:left; height:100%; color:black;" >
           <h3><a href="sptharian.php"><h3 style="text-align:center"><b> SPT HARIAN</b></h3></a></h3>
             </div>
           </div>
@@ -94,7 +94,7 @@
       <div class="container">
         <br>
         <div style="text-align:center" >
-          <div class="input-field-border-bottom bg-warning text-white" style="text-align:left; height:100%;" >
+          <div class="input-field-border-bottom bg-dark text-white" style="text-align:left; height:100%;" >
           <h3><a href="sptjam.php"><h3 style="text-align:center"><b> SPT JAM</b></h3></a></h3>
             </div>
           </div>
