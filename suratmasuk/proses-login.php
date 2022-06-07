@@ -11,7 +11,7 @@ if (isset($_POST['login'])){
         header("location:index.php");
 
     }else{
-        echo '<script>alert("Login Gagal!!!");location.href="login.php"</script>';
+        echo '<script>alert("LOGIN GAGAL");location.href="login.php"</script>';
     }
     }else{
     header("location:login.php?pesan=gagal");
