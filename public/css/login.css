@@ -13,13 +13,13 @@ html,body {
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 0.5px solid #bfbfbf;
+    border: 0.5px solid #8f8f8f;
     border-radius: 0rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 body.login-page {
-	background: url("../img/bgfix.jpg") top center;
+	background-color: rgb(235, 235, 235);
 	background-size: cover;
 	position: relative;
 	font-size: 14px;
