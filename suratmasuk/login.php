@@ -13,10 +13,10 @@
 <div class="login-box">
     <img src="../public/img/logo.png" alt="logo" height="70px" width="70px" class="center">
     <br>
-  <h2>LOGIN</h2>
-  <h3>SURAT MASUK</h3>
+  <h2><b>LOGIN</b></h2>
+  <h4>SURAT MASUK</h4>
   <form action="proses-login.php" method="POST" class="login-validation" novalidate="">
-  <br><br><br>
+  <br><br>
   <form>
     <div class="user-box">
       <input type="text" name="username" required="">
