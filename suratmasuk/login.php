@@ -27,7 +27,7 @@
       <label>Password</label>
     </div>
     <div class="text-center">
-        <button type="submit" name="login" class="btn btn-primary btn-block" >Login</button>
+        <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
     </div>
   </form>
 </div>
