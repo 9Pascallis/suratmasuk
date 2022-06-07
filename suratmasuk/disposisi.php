@@ -5,37 +5,104 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Disposisi | Surat Masuk</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../public/css/disposisi.css">
-<link rel="shortcut icon" href="../public/img/logo.png" />
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+<!--HEAD-->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tambah | Surat Masuk</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../public/img/logo.png" rel="icon">
+  <link href="../public/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- vendors CSS Files -->
+  <link href="../public/vendors/aos/aos.css" rel="stylesheet">
+  <link href="../public/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../public/vendors/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../public/vendors/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../public/vendors/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../public/vendors/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../public/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="public/img/logo.png" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- Main CSS File -->
+  <link href="../public/css/tambahsurat.css" rel="stylesheet">
+</head>
+<!--END HEAD-->
 
 <script>
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 }); 
 </script>
-</head>
-<body>
-<!-- Bootstrap Static Header -->
-<div style="background: url(../public/img/bg.jpg)" img src="../public/img/bg.jpg" class="bg-cover text-white">
-    <div class="header text-center">
-        <br><h4 class="header1 font-weight-bold">DISPOSISI</h4>
-    </div>
-</div>
 
-<div class="containerbox">
+<!--BODY-->
+<body>
+  <!-- ======= Header1 ======= -->
+  <header id="header1" class="fixed-top header1-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+      <h1 class="logo me-auto me-lg-0"><a href="../index.php"><img src="../public/img/logo.png" style="width:40px;height:40px;"> BMKG <span>JUANDA</span></a></h1>
+        <nav id="navbar1" class="navbar1 order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link" href="../index.php">Home</a></li>
+            <li class="dropdown"><a href="#"><span>Surat</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="../suratmasuk/login.php">Surat Masuk</a></li>
+                <li><a href="../suratmasuk/login.php">Surat Keluar</a></li>
+              </ul>
+            <li class="dropdown"><a href="#"><span>SPT</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="sptjam.php">SPT Jam</a></li>
+                <li><a href="sptharian.php">SPT Harian</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="https://juanda.jatim.bmkg.go.id/tata-usaha/usulan/login.php">Usulan</a></li>
+            <li><a class="nav-link scrollto" href="https://juanda.jatim.bmkg.go.id/tata-usaha/cuti/index.php">Pengajuan Cuti</a></li>
+            <li><a class="nav-link scrollto" href="https://docs.google.com/forms/d/1FFw69b9mUdI0VTd5VBa_yvCi5DoXNtH66P3r12tjrXE/viewform?edit_requested=true">IP ASN</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+  </header>
+  <!-- ======= End Header ======= -->
+
+
+
+  <!-- ======= Main ======= -->
+  <main id="main">
+    <!-- ======= breadcrumbs1 ======= -->
+    <section class="breadcrumbs1">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><b>Surat Masuk | Tambah Surat</b></h2>
+          <ol>
+            <li><a href="../index.php">Home</a></li>
+            <li>Tambah Surat</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ======= End breadcrumbs1 ======= -->
+
+    <div class="containerbox">
     <div class="table-responsive">
+    <h3><p class="text-center"><b>DISPOSISI</b></p></h3>
         <div class="table-wrapper">
             <form>
             <div class="row">
@@ -83,6 +150,7 @@ $(document).ready(function(){
             <hr class="new4">
             <div class="header text-center">
               <br><h5 class="header1 font-weight-bold" style="color:black;">Diteruskan Kepada Yth:</h5>
+              <br>
             </div>
             <div class="row" style="color:black;">
                 <div class="col-sm-1"></div>
@@ -257,15 +325,39 @@ $(document).ready(function(){
     </div>  
 </div>   
 
+    <!-- ======= Inner Page ======= -->
+    
+<!-- ======= End Inner Page ======= -->
+  </main>
+  <!-- ======= End Main ======= -->
 
-<div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <form>
 
-                    </form>
-                  </div>
-                </div>      
-              </div>
+
+  <!-- ======= Footer1 ======= -->
+  <footer id="footer1">
+    <div class="container">
+      <div class="copyright1">
+        &copy; Copyright <strong><span>2022 BMKG Juanda</span></strong>. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <!-- ======= End Footer1 ======= -->
+
+
+
+
+  <!-- vendors JS Files -->
+  <script src="public/vendors/purecounter/purecounter.js"></script>
+  <script src="public/vendors/aos/aos.js"></script>
+  <script src="public/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="public/vendors/glightbox/js/glightbox.min.js"></script>
+  <script src="public/vendors/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="public/vendors/swiper/swiper-bundle.min.js"></script>
+  <script src="public/vendors/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="public/js/main.js"></script>
+
 </body>
+<!--END BODY-->
 </html>
