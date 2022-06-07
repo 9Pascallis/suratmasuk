@@ -11,7 +11,7 @@ session_start();
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Tambah | Surat Masuk</title>
+  <title>Disposisi | Surat Masuk</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -90,10 +90,10 @@ $(document).ready(function(){
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2><b>Surat Masuk | Tambah Surat</b></h2>
+          <h2><b>Surat Masuk | Disposisi</b></h2>
           <ol>
             <li><a href="../index.php">Home</a></li>
-            <li>Tambah Surat</a></li>
+            <li>Disposisi</a></li>
           </ol>
         </div>
       </div>
@@ -316,10 +316,20 @@ $(document).ready(function(){
                           </div>
                         </div>
                         <br>
-                      <div style="text-align:right;">
-                        <button class="btn btn-light">Cancel</button>
-                          <button type="submit" class="btn btn-primary me-2"> Submit </button>
-                      </div>
+                        <div style="text-align:right;">
+                          <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../suratmasuk/kepala.php"style="color:white;">Cancel</a></button>
+                          <script>
+                            function openDialog() {
+                              let customMsg = "CANCEL DISPOSISI";
+                              if (confirm(customMsg)) {
+                                console.log("User clicked YES");
+                              } else {
+                                console.log("User Clicked NO");
+                              }
+                            }
+                          </script>
+                          <button type="submit" class="btn btn-primary me-2"> Disposisi  </button>
+                        </div>
             </form>
         </div>
     </div>  

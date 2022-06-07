@@ -171,10 +171,10 @@ $(document).ready(function(){
                         <td><?=$per?></td>
                         <td><?=$lmpr?></td>
                         <td>
-                            <a href="../suratmasuk/disposisirev.php" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="../suratmasuk/disposisi.php" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                         </td>
                         <td>
-                        <a href="../suratmasuk/disposisirev.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        <a href="../suratmasuk/disposisi.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                             <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>

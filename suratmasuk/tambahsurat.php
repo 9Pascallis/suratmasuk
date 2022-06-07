@@ -251,7 +251,7 @@ $(document).ready(function(){
             </div>
             <br>
             <div style="text-align:left;">
-              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../index.php"style="color:white;">Cancel</a></button>
+              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../suratmasuk/index.php"style="color:white;">Cancel</a></button>
               <script>
                 function openDialog() {
                   let customMsg = "CANCEL TAMBAH SURAT";
