@@ -147,7 +147,7 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
                 <?php
-                    $dataPerHal=100;
+                    $dataPerHal=70;
                     $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk"));
                     $banyakHal=ceil($banyakData/$dataPerHal);
                         if(isset($_GET['halaman'])){
@@ -158,7 +158,7 @@ $(document).ready(function(){
 
                     $dataawal=($halAktif*$dataPerHal)-$dataPerHal;
 
-                    $jumlahLink = 5;
+                    $jumlahLink = 4;
                     if($halAktif > $jumlahLink){
                       $start_number = $halAktif - $jumlahLink;
                     }else{
