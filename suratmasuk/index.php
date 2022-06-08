@@ -147,7 +147,7 @@ $(document).ready(function(){
                 </thead>
                 <tbody>
                 <?php
-                    $dataPerHal=30;
+                    $dataPerHal=100;
                     $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk"));
                     $banyakHal=ceil($banyakData/$dataPerHal);
                         if(isset($_GET['halaman'])){
@@ -157,6 +157,19 @@ $(document).ready(function(){
                         }
 
                     $dataawal=($halAktif*$dataPerHal)-$dataPerHal;
+
+                    $jumlahLink = 5;
+                    if($halAktif > $jumlahLink){
+                      $start_number = $halAktif - $jumlahLink;
+                    }else{
+                      $start_number = 1;
+                    }
+
+                    if($halAktif < ($banyakHal - $jumlahLink)){
+                      $end_number = $halAktif + $jumlahLink;
+                    }else{
+                      $end_number = $banyakHal; 
+                    }
                     
                     // <<<<<<<<<<<<<<<<<<<<<<<SEARCH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                     if(isset($_POST['cari'])){
@@ -232,7 +245,7 @@ $(document).ready(function(){
             ?>
             <!-- ==============end Previous=============== -->
             
-            <?php for($i=1; $i<=$banyakHal; $i++){
+            <?php for($i=$start_number; $i<=$end_number; $i++){
             ?>
             <li class="pge-item"><a href="?halaman=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
             <?php
