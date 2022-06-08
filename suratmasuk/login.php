@@ -19,7 +19,7 @@
   <br><br>
   <form>
     <div class="user-box">
-      <input type="text" name="username" required="">
+      <input type="text" name="username" required="" autocomplete="off">
       <label>Username</label>
     </div>
     <div class="user-box">

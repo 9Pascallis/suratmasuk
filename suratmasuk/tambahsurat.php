@@ -263,7 +263,7 @@ $(document).ready(function(){
                   }
                 }
               </script>
-              <button type="submit" class="btn btn-primary me-2"> Tambah  </button>
+              <button type="submit" class="btn btn-primary me-2">Tambah</button>
             </div>
             </form>
         </div>
