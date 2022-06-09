@@ -30,7 +30,7 @@ session_start();
                 <h2><b>Surat Masuk | Tambah Surat</b></h2>
                 <ol>
                   <li><a href="../index.php">Home</a></li>
-                  <li><a href="../suratmasuk/index.php">Surat Masuk</a></li>
+                  <li><a href="../suratmasuk/kepala.php">Surat Masuk</a></li>
                   <li>Tambah Surat</a></li>
                 </ol>
               </div>

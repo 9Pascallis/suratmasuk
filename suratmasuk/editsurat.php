@@ -38,7 +38,7 @@ if (isset($_POST["edit"])) {
   <head>
     <title>Tambah | Surat Masuk</title>
       <?php require('../layout/head.php')?>
-      <link href="../public/css/tambahsurat.css" rel="stylesheet">
+      <link href="../public/css/editsurat.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
   </head>
 <!-- ======= END HEAD ======= -->
