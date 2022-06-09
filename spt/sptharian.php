@@ -1,63 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--HEAD-->
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>SPT Harian | Tata Usaha BMKG</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="../public/img/logo.png" rel="icon">
-  <link href="../public/img/logo.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- vendors CSS Files -->
-  <link href="../public/vendors/aos/aos.css" rel="stylesheet">
-  <link href="../public/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../public/vendors/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../public/vendors/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../public/vendors/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../public/vendors/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../public/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="../public/css/sptharian.css" rel="stylesheet">
-</head>
-<!--END HEAD-->
+<!-- ======= HEAD ======= -->
+  <head>
+    <title>SPT | SPT HARIAN</title>
+      <?php require('../layout/head.php')?>
+      <link href="../public/css/sptharian.css" rel="stylesheet">
+      <script src="public/js/main.js"></script>
+  </head>
+<!-- ======= END HEAD ======= -->
 
 
+<!-- ======= BODY ======= -->
+  <body>
+    <!-- ======= HEADER ======= -->
+      <?php require('../layout/navbar.php')?>
+    <!-- ======= MAIN ======= -->
+      <main id="main">
+        <!-- ======= BREADCRUMBS1 ======= -->
+        <section class="breadcrumbs1">
+            <div class="container">
 
-<!--BODY-->
-<body>
-  <!-- ======= Header1 ======= -->
-
-  <!-- ======= End Header ======= -->
-
-
-
-  <!-- ======= Main ======= -->
-  <main id="main">
-    <!-- ======= breadcrumbs1 ======= -->
-    <section class="breadcrumbs1">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2><b>Tata Usaha | SPT Harian</b></h2>
-          <ol>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="index.php">SPT</a></li>
-            <li>SPT Harian</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-    <!-- ======= End breadcrumbs1 ======= -->
+              <div class="d-flex justify-content-between align-items-center">
+                <h2><b>SPT | SPT HARIAN</b></h2>
+                <ol>
+                  <li><a href="../index.php">Home</a></li>
+                  <li><a href="../spt/index.php">SPT</a></li>
+                  <li>SPT HARIAN</a></li>
+                </ol>
+              </div>
+            </div>
+          </section>
+        <!-- ======= END BREADCRUMBS1 ======= -->
 
 
     <!-- ======= Inner Page ======= -->

@@ -8,7 +8,7 @@ session_start();
 
 <!-- ======= HEAD ======= -->
   <head>
-    <title>Tambah | Surat Masuk</title>
+    <title>SURAT MASUK | DISPOSISI</title>
       <?php require('../layout/head.php')?>
       <link href="../public/css/disposisi.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
@@ -27,11 +27,10 @@ session_start();
             <div class="container">
 
               <div class="d-flex justify-content-between align-items-center">
-                <h2><b>Surat Masuk | Tambah Surat</b></h2>
+                <h2><b>SURAT MASUK | DISPOSISI</b></h2>
                 <ol>
                   <li><a href="../index.php">Home</a></li>
-                  <li><a href="../suratmasuk/index.php">Surat Masuk</a></li>
-                  <li>Tambah Surat</a></li>
+                  <li>Disposisi</a></li>
                 </ol>
               </div>
             </div>
