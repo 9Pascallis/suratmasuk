@@ -244,7 +244,6 @@ $(document).ready(function(){
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen</label>
                         <div class="col-sm-9">
                         <div class="custom-file">
-                            <label for="formFile" class="form-label">Default file input example</label>
                             <input type="file" class="form-control" name="file_pdf" id="formFile" value="<?= $mhs["file_pdf"]; ?>">
                         </div>
                         </div>
