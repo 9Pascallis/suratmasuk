@@ -241,11 +241,7 @@ $(document).ready(function(){
                     <div class="form-group row">
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen</label>
                         <div class="col-sm-9">
-                        <div class="custom-file">
-                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                            <input type="file" class="custom-file-input" name="file_pdf" id="colFormLabel">
-                        </div>
-                        
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
                         </div>
                     </div>
                 </div>
