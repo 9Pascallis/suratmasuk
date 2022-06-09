@@ -131,7 +131,6 @@ $(document).ready(function(){
 
     <div class="containerbox">
     <div class="table-responsive">
-    <h3><p class="text-center"><b>TAMBAH SURAT MASUK</b></p></h3>
         <div class="table-wrapper">
         <div class="row">
                 <div class="col-sm-12">
@@ -247,23 +246,16 @@ $(document).ready(function(){
                 </div>
             </div>
             <br>
-            <div style="text-align:left;">
-              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../suratmasuk/index.php"style="color:white;">Cancel</a></button>
-              <script>
-                function openDialog() {
-                  let customMsg = "CANCEL TAMBAH SURAT";
-                  if (confirm(customMsg)) {
-                    console.log("User clicked YES");
-                  } else {
-                    console.log("User Clicked NO");
-                  }
-                }
-              </script>
-              <button type="submit" class="btn btn-primary me-2">Tambah</button>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                <button class="btn btn-primary" name="tambah">Tambah Surat</button>
+                </div>
             </div>
             </form>
         </div>
     </div>  
+</div>   
+</body> 
 </div>   
 
     <!-- ======= Inner Page ======= -->

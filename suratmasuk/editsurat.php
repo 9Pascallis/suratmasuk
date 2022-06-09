@@ -18,7 +18,7 @@ if (isset($_POST["edit"])) {
         echo "
             <script>
                 alert('data berhasil ubah');
-                document.location.href = '../suratmasuk/operator.php';
+                document.location.href = '../suratmasuk/suratmasuk.php';
             </script>
                 ";
     } else {
@@ -132,7 +132,6 @@ $(document).ready(function(){
 
     <div class="containerbox">
     <div class="table-responsive">
-    <h3><p class="text-center"><b>EDIT SURAT MASUK</b></p></h3>
         <div class="table-wrapper">
         <div class="row">
                 <div class="col-sm-12">
@@ -169,7 +168,7 @@ $(document).ready(function(){
                     <div class="form-group row">
                         <label for="colFormLabel" class="col-sm-4 col-form-label">Tanggal Agenda</label>
                         <div class="col-sm-7">
-                        <input type="date" class="form-control" name="tgl_surat" id="tgl_surat" placeholder=""value="<?= $mhs["tgl_agenda"]; ?>">
+                        <input type="date" class="form-control" name="tgl_agenda" id="tgl_agenda" placeholder="">
                         </div>
                     </div>
                 </div>
@@ -201,7 +200,7 @@ $(document).ready(function(){
                             class="form-control"
                             id="exampleTextarea1" name="perihal"
                             rows="4"required><?= $mhs["perihal"];?>
-                          ></textarea>
+                          </textarea>
                         </div>
                     </div>
                 </div>
@@ -254,23 +253,16 @@ $(document).ready(function(){
                 </div>
             </div>
             <br>
-            <div style="text-align:left;">
-              <button class="btn btn-warning"style="color:#fff" onclick="openDialog()"><a href="../suratmasuk/index.php"style="color:white;">Cancel</a></button>
-              <script>
-                function openDialog() {
-                  let customMsg = "CANCEL EDIT SURAT";
-                  if (confirm(customMsg)) {
-                    console.log("User clicked YES");
-                  } else {
-                    console.log("User Clicked NO");
-                  }
-                }
-              </script>
-              <button type="submit" class="btn btn-primary me-2"> Edit  </button>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                <button class="btn btn-primary" name="edit">Edit Surat</button>
+                </div>
             </div>
             </form>
         </div>
     </div>  
+</div>   
+</body>
 </div>   
 
     <!-- ======= Inner Page ======= -->

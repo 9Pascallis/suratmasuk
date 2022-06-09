@@ -178,7 +178,9 @@ $(document).ready(function(){
                         tk_keamanan LIKE '%$keyword' OR
                         tgl_agenda LIKE '%$keyword' OR
                         tgl_surat LIKE '%$keyword%' OR
-                        asal_surat LIKE '%$keyword' 
+                        no_surat like '%$keyword%' OR
+                        asal_surat LIKE '%$keyword' OR
+                        perihal like '%$keyword'
                         LIMIT $dataawal, $dataPerHal
                         ");
                       }
