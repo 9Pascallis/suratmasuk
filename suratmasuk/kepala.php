@@ -8,9 +8,9 @@ session_start();
 
 <!-- ======= HEAD ======= -->
   <head>
-    <title>Tambah | Surat Masuk</title>
+    <title>Surat Masuk | Halaman Disposisi</title>
       <?php require('../layout/head.php')?>
-      <link href="../public/css/tambahsurat.css" rel="stylesheet">
+      <link href="../public/css/kepala.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
   </head>
 <!-- ======= END HEAD ======= -->
@@ -27,18 +27,21 @@ session_start();
             <div class="container">
 
               <div class="d-flex justify-content-between align-items-center">
-                <h2><b>Surat Masuk | Tambah Surat</b></h2>
+                <h2><b>Surat Masuk | Halaman Disposisi</b></h2>
                 <ol>
                   <li><a href="../index.php">Home</a></li>
-                  <li><a href="../suratmasuk/kepala.php">Surat Masuk</a></li>
-                  <li>Tambah Surat</a></li>
+                  <li>Halaman Disposisi</a></li>
                 </ol>
+
               </div>
             </div>
           </section>
         <!-- ======= END BREADCRUMBS1 ======= -->
 
         <!-- ======= CONTAINER ======= -->
+        <div class="fixlogin">
+        <a href="proses-logout.php" style="display: block"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
+        </div>
           <div class="containerbox">
             <div class="table-responsive">
               <h3><p class="text-center"><b>Bulan Maret 2022</b></p></h3>
@@ -108,11 +111,11 @@ session_start();
                           <td><?=$per?></td>
                           <td><?=$lmpr?></td>
                           <td>
-                              <a href="../suratmasuk/disposisi.php" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                              <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                           </td>
                           <td>
                           <a href="../suratmasuk/disposisi.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
-                              <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                              <a href="../suratmasuk/editdisposisi.php?id=<?php echo $data['id'];?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                               <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                           </td>
                       </tr>

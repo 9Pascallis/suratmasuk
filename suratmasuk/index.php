@@ -38,6 +38,9 @@ session_start();
         <!-- ======= END BREADCRUMBS1 ======= -->
 
         <!-- ======= CONTAINER ======= -->
+        <div class="fixlogin">
+        <a href="proses-logout.php" style="display: block"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
+        </div>
           <div class="containerbox">
             <div class="table-responsive">
               <h3><p class="text-center"><b>BULAN MARET 2022</b></p></h3>
