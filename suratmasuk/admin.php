@@ -38,6 +38,9 @@ session_start();
         <!-- ======= END BREADCRUMBS1 ======= -->
 
         <!-- ======= CONTAINER ======= -->
+        <div class="fixlogin">
+        <a href="proses-logout.php" style="display: block"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
+        </div>
           <div class="containerbox">
             <div class="table-responsive">
               <h3><p class="text-center"><b>BULAN MARET 2022</b></p></h3>
@@ -47,9 +50,9 @@ session_start();
                   <div class="col-sm-2">
                     <div class="form-group row">
                         <div class="col-sm-9">
-                            <a href="../suratmasuk/login.php" style="display: block"><button type="submit" class="btn btn-info">LOGIN</button></a>
+                            <a href="../suratmasuk/tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
                         </div>  
-                  </div> 
+                    </div>
                   </div> 
                   <div class="col-sm-6">
                   </div> 
@@ -77,6 +80,7 @@ session_start();
                       <th>Perihal</th>
                       <th>Lampiran</th>
                       <th>Disp</th>
+                      <th width="120px">Actions</th>
                       <th>Status</th>
                   </tr>
                 </thead>
@@ -146,6 +150,11 @@ session_start();
                         <td><?=$lmpr?></td>
                         <td>
                             <a href="../suratmasuk/disposisi.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        </td>
+                        <td>
+                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                         <td>
                             <div>
