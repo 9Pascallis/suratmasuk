@@ -37,6 +37,12 @@ if (isset($_POST['login'])){
             echo "<script type ='text/javascript'>alert('Selamat datang PPK!');
             location.href=\"kepala.php\"
             ;</script>";
+        }else if($role == 'admin'){
+            $_SESSION['log'] = 'Logged';
+            $_SESSION['role'] = 'admin';
+            echo "<script type ='text/javascript'>alert('Selamat datang Admin!');
+            location.href=\"admin.php\"
+            ;</script>";
         }else{
             echo "<script type ='text/javascript'>alert('Username atau Password salah!!!');
         location.href=\"login.php\"
