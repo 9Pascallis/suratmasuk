@@ -145,7 +145,7 @@ session_start();
                         <td><?=$per?></td>
                         <td><?=$lmpr?></td>
                         <td>
-                            <a href="../suratmasuk/disposisi.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td>
                             <div>
