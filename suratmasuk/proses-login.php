@@ -6,13 +6,7 @@ if (isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $query = mysqli_query($conn,"select * from user where username='$username' and password='$password'");
-<<<<<<< HEAD
-    if(mysqli_num_rows($query) !== 0){
-        $_SESSION["user"] = $query->fetch_assoc();
-        header("location:admin.php");
-=======
     $hitung = mysqli_num_rows($query);
->>>>>>> 4e169a5d0892320b7fe2cb581185043a7fef8187
 
     if($hitung > 0){
         //Data ditemukan
@@ -25,12 +19,28 @@ if (isset($_POST['login'])){
             echo "<script type ='text/javascript'>alert('Selamat datang KSTU!');
             location.href=\"kepala.php\"
             ;</script>";
-        }else{
+        }else if($role == 'kdat'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'kdat';
             echo "<script type ='text/javascript'>alert('Selamat datang KDAT!');
             location.href=\"kepala.php\"
             ;</script>";
+        }else if($role == 'kobs'){
+            $_SESSION['log'] = 'Logged';
+            $_SESSION['role'] = 'kdat';
+            echo "<script type ='text/javascript'>alert('Selamat datang KOBS!');
+            location.href=\"kepala.php\"
+            ;</script>";
+        }else if($role == 'ppk'){
+            $_SESSION['log'] = 'Logged';
+            $_SESSION['role'] = 'kdat';
+            echo "<script type ='text/javascript'>alert('Selamat datang PPK!');
+            location.href=\"kepala.php\"
+            ;</script>";
+        }else{
+            echo "<script type ='text/javascript'>alert('Username atau Password salah!!!');
+        location.href=\"login.php\"
+        ;</script>";
         }
     }else{
 
