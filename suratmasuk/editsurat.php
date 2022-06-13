@@ -18,14 +18,14 @@ if (isset($_POST["edit"])) {
         echo "
             <script>
                 alert('data berhasil ubah');
-                document.location.href = '../suratmasuk/suratmasuk.php';
+                document.location.href = '../suratmasuk/index.php';
             </script>
                 ";
     } else {
         echo "
             <script>
                 alert('data gagal ubah!!!');
-                document.location.href = '../suratmasuk/index.php';
+                document.location.href = '../suratmasuk/editsurat.php';
             </script>
         ";
     }
@@ -244,10 +244,8 @@ $(document).ready(function(){
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen</label>
                         <div class="col-sm-9">
                         <div class="custom-file">
-                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                            <input type="file" class="custom-file-input" name="file_pdf" id="colFormLabel"value="<?= $mhs["file_pdf"]; ?>">
+                            <input type="file" class="form-control" name="file_pdf" id="formFile" value="<?= $mhs["file_pdf"]; ?>">
                         </div>
-                        
                         </div>
                     </div>
                 </div>

@@ -240,7 +240,9 @@ $(document).ready(function(){
                     <div class="form-group row">
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen</label>
                         <div class="col-sm-9">
-                            <input type="file" class="form-control-file" name="file_pdf" id="colFormLabel">
+                            <div class="custom-file">
+                                <input class="form-control" type="file" id="formFile" name="file_pdf">
+                        </div>
                         </div>
                     </div>
                 </div>
