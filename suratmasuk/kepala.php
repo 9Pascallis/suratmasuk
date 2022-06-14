@@ -64,16 +64,30 @@ session_start();
                     </thead>
                     <tbody>
                       <?php
-                        $dataPerHal=30;
-                        $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk"));
+                        $dataPerHal=70;
+                        $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC"));
                         $banyakHal=ceil($banyakData/$dataPerHal);
                             if(isset($_GET['halaman'])){
                                 $halAktif=$_GET['halaman'];
                             }else{
                                 $halAktif=1;
                             }
+  
                         $dataawal=($halAktif*$dataPerHal)-$dataPerHal;
-                          
+  
+                        $jumlahLink = 4;
+                        if($halAktif > $jumlahLink){
+                          $start_number = $halAktif - $jumlahLink;
+                        }else{
+                          $start_number = 1;
+                        }
+  
+                        if($halAktif < ($banyakHal - $jumlahLink)){
+                          $end_number = $halAktif + $jumlahLink;
+                        }else{
+                          $end_number = $banyakHal; 
+                        }
+                        
                         // <<<<<<<<<<<<<<<<<<<<<<<SEARCH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
                         if(isset($_POST['cari'])){
                             $keyword = $_POST['keyword'];
@@ -81,12 +95,15 @@ session_start();
                             tk_keamanan LIKE '%$keyword' OR
                             tgl_agenda LIKE '%$keyword' OR
                             tgl_surat LIKE '%$keyword%' OR
-                            asal_surat LIKE '%$keyword' 
+                            no_surat like '%$keyword%' OR
+                            asal_surat LIKE '%$keyword' OR
+                            perihal like '%$keyword'
+                            ORDER BY id DESC
                             LIMIT $dataawal, $dataPerHal
                             ");
                           }
                           else{
-                            $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk LIMIT $dataawal, $dataPerHal ");
+                            $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC LIMIT $dataawal, $dataPerHal ");
                               }
 
                         while($data = mysqli_fetch_array($tampil)){
@@ -125,40 +142,40 @@ session_start();
                       </tbody>
                   </table>
                   <nav>
-                    <ul class="pagination justify-content-center">
-                    <!-- ============Previous============ -->
-                      <?php
-                      if($halAktif<=1){
-                      ?>
-                      <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
-                      <?php
-                      }else{?>
-                      <li class="page-item"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
-                      <?php
-                      }
-                      ?>
-                    <!-- ==============end Previous=============== -->
-                    
-                      <?php for($i=1; $i<=$banyakHal; $i++){
-                      ?>
-                      <li class="pge-item"><a href="?halaman=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
-                      <?php
-                      }//end for
-                      ?>
+                  <ul class="pagination justify-content-center">
+                  <!-- ============Previous============ -->
+                  <?php
+                  if($halAktif<=1){
+                  ?>
+                  <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
+                  <?php
+                  }else{?>
+                  <li class="page-item"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
+                  <?php
+                  }
+                  ?>
+                  <!-- ==============end Previous=============== -->
+                
+                  <?php for($i=$start_number; $i<=$end_number; $i++){
+                  ?>
+                  <li class="pge-item"><a href="?halaman=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
+                  <?php
+                  }//end for
+                  ?>
 
-                    <!-- ============Next============ -->
-                      <?php
-                      if($halAktif >= $banyakHal){
-                      ?>
-                      <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
-                      <?php
-                      }else{?>
-                      <li class="page-item"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
-                      <?php
-                      }
-                      ?>
-                    <!-- ==============end Next=============== -->
-                    </ul>
+                  <!-- ============Next============ -->
+                  <?php
+                  if($halAktif >= $banyakHal){
+                  ?>
+                  <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
+                  <?php
+                  }else{?>
+                  <li class="page-item"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
+                  <?php
+                  }
+                  ?>
+                  <!-- ==============end Next=============== -->
+                </ul>
                   </nav>            
             </div>  
           </div>   
