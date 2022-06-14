@@ -1,6 +1,10 @@
 <?php
 require '../database/db.php';
 session_start();
+if (!isset($_SESSION["login"])) {
+  echo "<script>alert('silahkan login dahulu');</script>";
+  echo "<script>location='login.php';</script>";
+}
 ?>
 
 <!DOCTYPE html>

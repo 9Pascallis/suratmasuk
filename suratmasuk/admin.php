@@ -1,6 +1,10 @@
 <?php
 require '../database/db.php';
 session_start();
+if (!isset($_SESSION["login"])) {
+  echo "<script>alert('silahkan login dahulu');</script>";
+  echo "<script>location='login.php';</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -149,7 +153,7 @@ session_start();
                         <td><?=$per?></td>
                         <td><?=$lmpr?></td>
                         <td>
-                            <a href="../suratmasuk/disposisi.php" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td>
                             <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>

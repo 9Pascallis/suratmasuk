@@ -1,6 +1,7 @@
 <?php
 
 require '../suratmasuk/function.php';
+
 //get last row from database
 $mhs = query("SELECT * FROM surat_masuk ORDER BY id DESC LIMIT 1")[0];
 $last_row = $mhs["no_agenda"];
