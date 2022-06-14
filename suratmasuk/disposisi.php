@@ -55,45 +55,59 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
               <div class="table-wrapper">
               <form action="" method="post">
                 <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">No Agenda</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['no_agenda'] ?></label>
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">No Agenda</label>
+                    </div>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['no_agenda'] ?></label>     
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">TIngkat Keamanan</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['tk_keamanan'] ?></label>
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">Tingkat Keamanan</label>
+                    </div>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['tk_keamanan'] ?></label>     
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">Tanggal Penerimaan</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['tgl_agenda'] ?></label>
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">Tanggal Penerimaan</label>
+                    </div>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['tgl_agenda'] ?></label>     
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">Nomor Surat</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['no_surat'] ?></label>
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">Nomor Surat</label>
+                    </div>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['no_surat'] ?></label>     
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">Tanggal Surat</label>
+                    </div>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['tgl_surat'] ?></label>     
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">Tanggal Surat</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['tgl_surat'] ?></label>
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">Asal Surat</label>
+                    </div>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['asal_surat'] ?></label>     
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">Asal Surat</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['asal_surat'] ?></label>
+                    <div class="col-sm-2">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">Perihal</label>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                            <label for="colFormLabel" class="col-sm-2 col-form-label">Perihal</label>
-                            <label for="colFormLabel" class="col-sm-1 col-form-label">:<?= $ambil_data['perihal'] ?><label>
+                    <div class="col-sm-10">
+                            <label for="colFormLabel" class="col-sm-12 col-form-label">: <?= $ambil_data['perihal'] ?></label>     
                     </div>
                 </div>
 
