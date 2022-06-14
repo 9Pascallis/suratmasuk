@@ -1,7 +1,10 @@
 <?php
 
 require '../suratmasuk/function.php';
-
+if (!isset($_SESSION["login"])) {
+    echo "<script>alert('silahkan login dahulu');</script>";
+    echo "<script>location='login.php';</script>";
+  }
 //get last row from database
 $mhs = query("SELECT * FROM surat_masuk ORDER BY id DESC LIMIT 1")[0];
 $last_row = $mhs["no_agenda"];
