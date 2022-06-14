@@ -87,7 +87,7 @@ session_start();
                 <tbody>
                   <?php
                       $dataPerHal=70;
-                      $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk"));
+                      $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC"));
                       $banyakHal=ceil($banyakData/$dataPerHal);
                           if(isset($_GET['halaman'])){
                               $halAktif=$_GET['halaman'];
@@ -120,15 +120,18 @@ session_start();
                           no_surat like '%$keyword%' OR
                           asal_surat LIKE '%$keyword' OR
                           perihal like '%$keyword'
+                          ORDER BY id DESC
                           LIMIT $dataawal, $dataPerHal
                           ");
                         }
                         else{
-                          $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk LIMIT $dataawal, $dataPerHal ");
+                          $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC LIMIT $dataawal, $dataPerHal ");
                             }
 
+                      $noUrut = 1;
+
                       while($data = mysqli_fetch_array($tampil)){
-                          $idMasuk=$data['id'];
+
                           $noAgenda=$data['no_agenda'];
                           $tglAgenda=$data['tgl_agenda'];
                           $tk=$data['tk_keamanan'];
@@ -139,7 +142,7 @@ session_start();
                           $lmpr=$data['lampiran'];
                   ?>
                     <tr>
-                        <td><?=$idMasuk?></td>
+                        <td><?=$noUrut++?></td>
                         <td><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
                         <td><?=$tk?></td>
@@ -172,7 +175,7 @@ session_start();
                 </tbody>
               </table>
               <nav>
-                <ul class="pagination justify-content-center">
+              <ul class="pagination justify-content-center">
                   <!-- ============Previous============ -->
                   <?php
                   if($halAktif<=1){

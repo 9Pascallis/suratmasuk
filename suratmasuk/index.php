@@ -123,9 +123,11 @@ session_start();
                         else{
                           $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC LIMIT $dataawal, $dataPerHal ");
                             }
+                      
+                      $noUrut = 1;
 
                       while($data = mysqli_fetch_array($tampil)){
-                          $idMasuk=$data['id'];
+                         
                           $noAgenda=$data['no_agenda'];
                           $tglAgenda=$data['tgl_agenda'];
                           $tk=$data['tk_keamanan'];
@@ -136,7 +138,7 @@ session_start();
                           $lmpr=$data['lampiran'];
                   ?>
                     <tr>
-                        <td><?=$idMasuk?></td>
+                        <td><?=$noUrut++?></td> 
                         <td><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
                         <td><?=$tk?></td>
