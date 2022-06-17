@@ -160,7 +160,7 @@ if (!isset($_SESSION["login"])) {
                         <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>

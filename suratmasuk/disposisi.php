@@ -120,25 +120,25 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                   <div class="col-sm-2">
                               <div class="form-check form-check-primary">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value="Kasubagtu" name="diteruskan[]" /> Kasubag tata usaha </label>
+                                  <input type="checkbox" class="form-check-input" value="kstu" name="diteruskan[]" /> Kasubag tata usaha </label>
                               </div>
                   </div>
                   <div class="col-sm-2">
                               <div class="form-check form-check-primary">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" name="diteruskan[]" value="koorbiddatin" /> KoorBid Datin </label>
+                                  <input type="checkbox" class="form-check-input" name="diteruskan[]" value="kdat" /> KoorBid Datin </label>
                               </div>
                   </div>
                   <div class="col-sm-2">
                               <div class="form-check form-check-primary">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" name="diteruskan[]" value="koorbidobservasi" /> KoorBid Observasi </label>
+                                  <input type="checkbox" class="form-check-input" name="diteruskan[]" value="kobs" /> KoorBid Observasi </label>
                               </div>
                   </div>
                   <div class="col-sm-2">
                               <div class="form-check form-check-primary">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" name="diteruskan[]" value="pkk"/> PPK </label>
+                                  <input type="checkbox" class="form-check-input" name="diteruskan[]" value="ppk"/> PPK </label>
                               </div>
                   </div>
                   <div class="col-sm-2">
@@ -159,19 +159,19 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                     <div class="form-group">
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="opsi[]" value="HaMewakil" /> Harap Mewakili </label>
+                          <input type="checkbox" class="form-check-input" name="opsi[]" value="mewakil" /> Harap Mewakili </label>
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="opsi[]" value="HaMeng"/> Hadir Menghadiri </label>
+                          <input type="checkbox" class="form-check-input" name="opsi[]" value="mendampingi"/> Hadir Mendampingi </label>
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="opsi[]" value="SegDitin" /> Segera DitindakLanjuti </label>
+                          <input type="checkbox" class="form-check-input" name="opsi[]" value="tindaklanjt" /> Segera DitindakLanjuti </label>
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="opsi[]" value="saran"/> Mohon Tanggapan/saran/masukan </label>
+                          <input type="checkbox" class="form-check-input" name="opsi[]" value="tanggapan"/> Mohon Tanggapan/saran/masukan </label>
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
@@ -185,23 +185,23 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                   <div class="form-group">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" value="dikonsul"/> Dikonsultasikan dengan </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="konsultasi"/> Dikonsultasikan dengan </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" value="dibuat"/> Dibuat Surat Jawaban </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="jawaban"/> Dibuat Surat Jawaban </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" value="bahanmonitoring"/> Bahan Monitoring </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="monitoring"/> Bahan Monitoring </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" value="BSE"/> Buat Surat Edaran </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="edaran"/> Buat Surat Edaran </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" value="UDST"/> Untuk Dibuat Surat Tugas </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="tugas"/> Untuk Dibuat Surat Tugas </label>
                     </div>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" value="diket"/> Untuk diketahui </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="diketahui"/> Untuk diketahui </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
@@ -240,23 +240,23 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                   <div class="form-group">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" /> Untuk dimonitor </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]"value="monitor" /> Untuk dimonitor </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]" /> Untuk dijadikan bahan masukan </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="masukan" /> Untuk dijadikan bahan masukan </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]"/> Untuk didiskusikan dengan </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="diskusi"/> Untuk didiskusikan dengan </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]"/> Untuk dikoordinasikan dengan </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]"value="koordinasi"/> Untuk dikoordinasikan dengan </label>
                     </div>
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="opsi[]"/> Untuk diarsipkan </label>
+                        <input type="checkbox" class="form-check-input" name="opsi[]" value="diarsipkan"/> Untuk diarsipkan </label>
                     </div>
                   </div>
                   <br>
