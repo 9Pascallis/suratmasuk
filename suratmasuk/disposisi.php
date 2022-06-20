@@ -167,7 +167,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="opsi[]" value="tindaklanjt" /> Segera DitindakLanjuti </label>
+                          <input type="checkbox" class="form-check-input" name="opsi[]" value="tindaklanjut" /> Segera DitindakLanjuti </label>
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
@@ -208,7 +208,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                 <div class="col-md-3">
                   <div class="form-check">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="pilihan[]" value="diket"/><h5 class="card-title"><b>Diketahui</b></h5></label>
+                          <input type="checkbox" class="form-check-input" name="pilihan[]" value="diketahui"/><h5 class="card-title"><b>Diketahui</b></h5></label>
                   </div>
                   <p class="card-description"> Masukkan yang ingin dicentang </p>
                   <div class="form-group">
