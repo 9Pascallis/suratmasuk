@@ -79,7 +79,6 @@ session_start();
                       <p>&ensp;&ensp;</p>
                       <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
                     </div>
-
                   </div>
 
                 </div>
