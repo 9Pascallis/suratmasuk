@@ -89,15 +89,15 @@ session_start();
                   <tr>
                       <th width="10px">No</th>
                       <th width="10px">No Agenda</th>
-                      <th width="10px">Tanggal Agenda</th>
-                      <th width="10px">Tingkat Keamanan</th>
-                      <th width="10px">Tanggal Surat</th>
+                      <th>Tanggal Agenda</th>
+                      <th>Tingkat Keamanan</th>
+                      <th>Tanggal Surat</th>
                       <th style="text-align: center; "width="10px">No Surat</th>
                       <th style="text-align: center; ">Asal Surat</th>
                       <th style="text-align: center; ">Perihal</th>
-                      <th>Lampiran</th>
-                      <th>Disp</th>
-                      <th>File</th>
+                      <th style="text-align: center; ">Lampiran</th>
+                      <th style="text-align: center; ">File</th>
+                      <th style="text-align: center; ">Disposisi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -163,24 +163,23 @@ session_start();
                     <tr style="background-color:#FFC07C;color:#994F01;">
                     <?php } else { ?>
                     <tr><?php } ?>
-                        <td><?=$noUrut++?></td> 
-                        <td><?=$noAgenda?></td>
+                        <td style="text-align: center; "><?=$noUrut++?></td> 
+                        <td style="text-align: center; "><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
-                        <td><?=$tk?></td>
+                        <td style="text-align: center; "><?=$tk?></td>
                         <td><?=$tglSurat?></td>
                         <td style="text-align: center; "><?=$noSurat?></td>
                         <td style="text-align: center; "> <?=$asalSurat?></td>
                         <td style="text-align: center; "><?=$per?></td>
                         <td style="text-align: center; "><?=$lam?></td>
-                        <td>
-                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
-                        </td>
-                        
                         <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
                         <td style="text-align: center; ">-</td>
                         <?php } else { ?>
                          <td style="text-align: center; "><a href="<?= "../berkas/" . $data['file_pdf']; ?>" target="_blank">&#x1F4C1;</a></td>
                         <?php } ?>
+                        </td>
+                        <td style="text-align: center; ">
+                        <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                         </td>
                     </tr>
                   <?php
