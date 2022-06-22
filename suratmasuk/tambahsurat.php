@@ -1,6 +1,10 @@
 <?php
 
 require '../suratmasuk/function.php';
+//get last row from database
+$mhs = query("SELECT * FROM surat_masuk ORDER BY id DESC LIMIT 1")[0];
+$last_row = $mhs["no_agenda"];
+
 // if (!isset($_SESSION["login"])) {
 //     echo "<script>alert('silahkan login dahulu');</script>";
 //     echo "<script>location='login.php';</script>";
@@ -139,7 +143,7 @@ $(document).ready(function(){
         <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group row">
-                        <label for="colFormLabel" class="col-sm-12 col-form-label">No Agenda Sebelumnya : </label>
+                        <label for="colFormLabel" class="col-sm-12 col-form-label">No Agenda Sebelumnya :  <?= $last_row; ?></label>
                     </div>
                 </div>
             </div>
