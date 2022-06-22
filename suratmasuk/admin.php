@@ -94,6 +94,7 @@ if (!isset($_SESSION["login"])) {
                       <th>Asal Surat</th>
                       <th>Perihal</th>
                       <th>Lampiran</th>
+                      <th style="text-align: center; ">File</th>
                       <th>Disp</th>
                       <th width="120px">Actions</th>
                   </tr>
@@ -154,6 +155,7 @@ if (!isset($_SESSION["login"])) {
                           $asalSurat=$data['asal_surat'];
                           $per=$data['perihal'];
                           $lmpr=$data['lampiran'];
+                          $file=$data['file_pdf'];
                   ?>
                     <tr>
                     <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
@@ -169,6 +171,12 @@ if (!isset($_SESSION["login"])) {
                         <td><?=$asalSurat?></td>
                         <td><?=$per?></td>
                         <td><?=$lmpr?></td>
+                        <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
+                        <td style="text-align: center; ">-</td>
+                        <?php } else { ?>
+                         <td style="text-align: center; "><a href="<?= "../berkas/" . $data['file_pdf']; ?>" target="_blank">&#x1F4C1;</a></td>
+                        <?php } ?>
+                        </td>
                         <td>
                         <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
