@@ -1,7 +1,7 @@
 <?php
 require '../database/db.php';
 session_start();
-if (!isset($_SESSION["login"])) {
+if (!isset($_SESSION["user"])) {
   echo "<script>alert('silahkan login dahulu');</script>";
   header("Location: login.php");
   exit;
