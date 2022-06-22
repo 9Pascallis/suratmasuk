@@ -175,7 +175,7 @@ session_start();
                         <?php } ?>
                         </td>
                         <td style="text-align: center; ">
-                        <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                        <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" ><i class="material-icons">&#xE417;</i></a>
                         </td>
                     </tr>
                   <?php

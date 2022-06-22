@@ -53,6 +53,11 @@ if (!isset($_SESSION["login"])) {
                 <br>
                 <div class="row">
                 <div class="position-relative">
+                    <div class="position-absolute top-0 start-0">
+                      <div class="form-group row">
+                          <a href="../suratmasuk/tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
+                      </div> 
+                    </div>
                     <div class="position-absolute top-0 end-0">
                       <div class="input-group">
                         <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">

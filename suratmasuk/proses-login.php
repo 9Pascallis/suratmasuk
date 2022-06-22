@@ -16,47 +16,47 @@ if (isset($_POST['login'])){
         if($role == 'kstu'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'kstu';
-            echo "<script type ='text/javascript'>alert('Selamat datang KSTU!');
+            echo "<script>
             location.href=\"kepala.php\"
             ;</script>";
         }else if($role == 'kdat'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'kdat';
-            echo "<script type ='text/javascript'>alert('Selamat datang KDAT!');
+            echo "<script>
             location.href=\"kepala.php\"
             ;</script>";
         }else if($role == 'kobs'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'kdat';
-            echo "<script type ='text/javascript'>alert('Selamat datang KOBS!');
+            echo "<script>
             location.href=\"kepala.php\"
             ;</script>";
         }else if($role == 'ppk'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'kdat';
-            echo "<script type ='text/javascript'>alert('Selamat datang PPK!');
+            echo "<script>
             location.href=\"kepala.php\"
             ;</script>";
         }else if($role == 'admin'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'admin';
-            echo "<script type ='text/javascript'>alert('Selamat datang Admin!');
+            echo "<script>
             location.href=\"admin.php\"
             ;</script>";
         }else if($role == 'operator'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['role'] = 'operator';
-            echo "<script type ='text/javascript'>alert('Selamat datang Operator!');
+            echo "<script>
             location.href=\"admin.php\"
             ;</script>";
         }else{
-            echo "<script type ='text/javascript'>alert('Username atau Password salah!!!');
+            echo "<script type ='text/javascript'>alert('Username atau Password salah');
         location.href=\"login.php\"
         ;</script>";
         }
     }else{
 
-        echo "<script type ='text/javascript'>alert('Username atau Password salah!!!');
+        echo "<script type ='text/javascript'>alert('Username atau Password salah');
         location.href=\"login.php\"
         ;</script>";
     }
