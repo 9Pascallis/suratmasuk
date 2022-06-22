@@ -13,7 +13,7 @@ if (!isset($_SESSION["login"])) {
 
 <!-- ======= HEAD ======= -->
   <head>
-    <title>Surat Masuk | Halaman Disposisi</title>
+    <title>Surat Masuk | Halaman Kepala</title>
       <?php require('../layout/head.php')?>
       <link href="../public/css/kepala.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
@@ -32,7 +32,7 @@ if (!isset($_SESSION["login"])) {
             <div class="container">
 
               <div class="d-flex justify-content-between align-items-center">
-                <h2><b>Surat Masuk | Halaman Disposisi</b></h2>
+                <h2><b>Surat Masuk | Halaman Kepala</b></h2>
                 <ol>
                   <li><a href="../index.php">Home</a></li>
                   <li>Halaman Disposisi</a></li>
@@ -91,8 +91,8 @@ if (!isset($_SESSION["login"])) {
                           <th>Perihal</th>
                           <th>Lampiran</th>
                           <th style="text-align: center; ">File</th>
-                          <th>Hasil</th>
-                          <th width="120px">Disposisi</th>
+                          <th style="text-align: center; ">Disposisi</th>
+                          <th style="text-align: center; ">Disposisi</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -173,14 +173,14 @@ if (!isset($_SESSION["login"])) {
                          <td style="text-align: center; "><a href="<?= "../berkas/" . $data['file_pdf']; ?>" target="_blank">&#x1F4C1;</a></td>
                         <?php } ?>
                         </td>
-                          <td>
-                              <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                          </td>
-                          <td>
-                          <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
-                          <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>"class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                              <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                          </td>
+                        <td style="text-align:center;">
+                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                            <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
                       </tr>
                       <?php
                           };

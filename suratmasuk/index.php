@@ -88,10 +88,10 @@ session_start();
                       <th>Tanggal Agenda</th>
                       <th>Tingkat Keamanan</th>
                       <th>Tanggal Surat</th>
-                      <th style="text-align: center; "width="10px">No Surat</th>
-                      <th style="text-align: center; ">Asal Surat</th>
-                      <th style="text-align: center; ">Perihal</th>
-                      <th style="text-align: center; ">Lampiran</th>
+                      <th width="10px">No Surat</th>
+                      <th>Asal Surat</th>
+                      <th>Perihal</th>
+                      <th>Lampiran</th>
                       <th style="text-align: center; ">File</th>
                       <th style="text-align: center; ">Disposisi</th>
                   </tr>
@@ -159,15 +159,15 @@ session_start();
                     <tr style="background-color:#FFC07C;color:#994F01;">
                     <?php } else { ?>
                     <tr><?php } ?>
-                        <td style="text-align: center; "><?=$noUrut++?></td> 
-                        <td style="text-align: center; "><?=$noAgenda?></td>
+                        <td><?=$noUrut++?></td> 
+                        <td><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
-                        <td style="text-align: center; "><?=$tk?></td>
+                        <td><?=$tk?></td>
                         <td><?=$tglSurat?></td>
-                        <td style="text-align: center; "><?=$noSurat?></td>
-                        <td style="text-align: center; "> <?=$asalSurat?></td>
-                        <td style="text-align: center; "><?=$per?></td>
-                        <td style="text-align: center; "><?=$lam?></td>
+                        <td><?=$noSurat?></td>
+                        <td> <?=$asalSurat?></td>
+                        <td><?=$per?></td>
+                        <td><?=$lam?></td>
                         <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
                         <td style="text-align: center; ">-</td>
                         <?php } else { ?>
@@ -175,7 +175,7 @@ session_start();
                         <?php } ?>
                         </td>
                         <td style="text-align: center; ">
-                        <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" ><i class="material-icons">&#xE417;</i></a>
+                        <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" ><i class="material-icons">&#xE431;</i></a>
                         </td>
                     </tr>
                   <?php

@@ -13,7 +13,7 @@ if (!isset($_SESSION["login"])) {
 
 <!-- ======= HEAD ======= -->
   <head>
-    <title>Surat Masuk | Halaman Admin</title>
+    <title>Surat Masuk | Halaman Koorbid</title>
       <?php require('../layout/head.php')?>
       <link href="../public/css/indexsuratmasuk.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
@@ -32,7 +32,7 @@ if (!isset($_SESSION["login"])) {
             <div class="container">
 
               <div class="d-flex justify-content-between align-items-center">
-                <h2><b>Surat Masuk | Halaman Admin</b></h2>
+                <h2><b>Surat Masuk | Halaman Koorbid</b></h2>
                 <ol>
                   <li><a href="../index.php">Home</a></li>
                   <li>Surat Masuk</a></li>
@@ -52,12 +52,7 @@ if (!isset($_SESSION["login"])) {
               <div class="table-wrapper">
                 <br>
                 <div class="row">
-                <div class="position-relative">
-                    <div class="position-absolute top-0 start-0">
-                      <div class="form-group row">
-                          <a href="../suratmasuk/tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
-                      </div> 
-                    </div>
+                  <div class="position-relative">
                     <div class="position-absolute top-0 end-0">
                       <div class="input-group">
                         <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
@@ -87,22 +82,21 @@ if (!isset($_SESSION["login"])) {
                   <tr>
                       <th width="10px">No</th>
                       <th width="10px">No Agenda</th>
-                      <th width="10px">Tanggal Agenda</th>
-                      <th width="10px">Tingkat Keamanan</th>
-                      <th width="10px">Tanggal Surat</th>
+                      <th>Tanggal Agenda</th>
+                      <th>Tingkat Keamanan</th>
+                      <th>Tanggal Surat</th>
                       <th width="10px">No Surat</th>
                       <th>Asal Surat</th>
                       <th>Perihal</th>
                       <th>Lampiran</th>
-                      <th style="text-align:center;">File</th>
-                      <th style="text-align:center;">Disposisi</th>
-                      <th style="text-align:center;" width="120px">Actions</th>
+                      <th style="text-align: center; ">File</th>
+                      <th style="text-align: center; ">Disposisi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
                       $dataPerHal=70;
-                      $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC"));
+                      $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC" ));
                       $banyakHal=ceil($banyakData/$dataPerHal);
                           if(isset($_GET['halaman'])){
                               $halAktif=$_GET['halaman'];
@@ -142,11 +136,11 @@ if (!isset($_SESSION["login"])) {
                         else{
                           $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC LIMIT $dataawal, $dataPerHal ");
                             }
-
+                      
                       $noUrut = 1;
 
                       while($data = mysqli_fetch_array($tampil)){
-
+                         
                           $noAgenda=$data['no_agenda'];
                           $tglAgenda=$data['tgl_agenda'];
                           $tk=$data['tk_keamanan'];
@@ -154,7 +148,7 @@ if (!isset($_SESSION["login"])) {
                           $noSurat=$data['no_surat'];
                           $asalSurat=$data['asal_surat'];
                           $per=$data['perihal'];
-                          $lmpr=$data['lampiran'];
+                          $lam=$data['lampiran'];
                           $file=$data['file_pdf'];
                   ?>
                     <tr>
@@ -162,28 +156,23 @@ if (!isset($_SESSION["login"])) {
                     <tr style="background-color:#FFC07C;color:#994F01;">
                     <?php } else { ?>
                     <tr><?php } ?>
-                        <td><?=$noUrut++?></td>
+                        <td><?=$noUrut++?></td> 
                         <td><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
                         <td><?=$tk?></td>
                         <td><?=$tglSurat?></td>
                         <td><?=$noSurat?></td>
-                        <td><?=$asalSurat?></td>
+                        <td> <?=$asalSurat?></td>
                         <td><?=$per?></td>
-                        <td><?=$lmpr?></td>
+                        <td><?=$lam?></td>
                         <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
-                        <td style="text-align:center;">-</td>
+                        <td style="text-align: center; ">-</td>
                         <?php } else { ?>
-                         <td style="text-align:center;"><a href="<?= "../berkas/" . $data['file_pdf']; ?>" target="_blank">&#x1F4C1;</a></td>
+                         <td style="text-align: center; "><a href="<?= "../berkas/" . $data['file_pdf']; ?>" target="_blank">&#x1F4C1;</a></td>
                         <?php } ?>
                         </td>
-                        <td style="text-align:center;">
-                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
-                        </td>
-                        <td style="text-align:center;">
-                            <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        <td style="text-align: center; ">
+                        <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" ><i class="material-icons">&#xE431;</i></a>
                         </td>
                     </tr>
                   <?php
@@ -192,7 +181,7 @@ if (!isset($_SESSION["login"])) {
                 </tbody>
               </table>
               <nav>
-              <ul class="pagination justify-content-center">
+                <ul class="pagination justify-content-center">
                   <!-- ============Previous============ -->
                   <?php
                   if($halAktif<=1){
