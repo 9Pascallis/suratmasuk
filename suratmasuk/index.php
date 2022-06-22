@@ -1,10 +1,10 @@
 <?php
 require '../database/db.php';
 session_start();
-if (!isset($_SESSION["login"])) {
-  echo "<script>alert('silahkan login dahulu');</script>";
-  echo "<script>location='login.php';</script>";
-}
+// if (!isset($_SESSION["login"])) {
+//   echo "<script>alert('silahkan login dahulu');</script>";
+//   echo "<script>location='login.php';</script>";
+// }
 ?>
 
 <!DOCTYPE html>
@@ -76,12 +76,12 @@ if (!isset($_SESSION["login"])) {
                       <th width="10px">Tanggal Agenda</th>
                       <th width="10px">Tingkat Keamanan</th>
                       <th width="10px">Tanggal Surat</th>
-                      <th width="10px">No Surat</th>
-                      <th>Asal Surat</th>
-                      <th>Perihal</th>
+                      <th style="text-align: center; "width="10px">No Surat</th>
+                      <th style="text-align: center; ">Asal Surat</th>
+                      <th style="text-align: center; ">Perihal</th>
                       <th>Lampiran</th>
                       <th>Disp</th>
-                      <th>Status</th>
+                      <th>File</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -139,7 +139,8 @@ if (!isset($_SESSION["login"])) {
                           $noSurat=$data['no_surat'];
                           $asalSurat=$data['asal_surat'];
                           $per=$data['perihal'];
-                          $lmpr=$data['lampiran'];
+                          $lam=$data['lampiran'];
+                          $file=$data['file_pdf'];
                   ?>
                     <tr>
                         <td><?=$noUrut++?></td> 
@@ -147,21 +148,19 @@ if (!isset($_SESSION["login"])) {
                         <td><?=$tglAgenda?></td>
                         <td><?=$tk?></td>
                         <td><?=$tglSurat?></td>
-                        <td><?=$noSurat?></td>
-                        <td><?=$asalSurat?></td>
-                        <td><?=$per?></td>
-                        <td><?=$lmpr?></td>
+                        <td style="text-align: center; "><?=$noSurat?></td>
+                        <td style="text-align: center; "> <?=$asalSurat?></td>
+                        <td style="text-align: center; "><?=$per?></td>
+                        <td style="text-align: center; "><?=$lam?></td>
                         <td>
                         <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view" title="Read" data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
-                        <td>
-                            <div>
-                                <span class="indicator online"></span> Online
-                            </div>
-                            
-                            <div>
-                                <span class="indicator offline"></span> Offline
-                            </div>
+                        
+                        <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
+                        <td style="text-align: center; ">-</td>
+                        <?php } else { ?>
+                         <td style="text-align: center; "><a href="<?= "../berkas/" . $data['file_pdf']; ?>" target="_blank">&#x1F4C1;</a></td>
+                        <?php } ?>
                         </td>
                     </tr>
                   <?php

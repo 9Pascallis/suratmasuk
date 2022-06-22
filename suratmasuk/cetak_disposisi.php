@@ -176,7 +176,7 @@ if (in_array('user',$tek)) {
     $pdf->SetFont('ZapfDingbats', '', 10);
     $pdf->Cell(3.5, 6, chr(52), 'T,B', 0);
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->Cell(35, 6, '__________', 'T,B', 1, 'L');
+    $pdf->Cell(35, 6, 'lainnya', 'T,B', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 } else {
     $pdf->SetTextColor(0, 0, 0);
@@ -184,7 +184,7 @@ if (in_array('user',$tek)) {
     $pdf->SetFont('ZapfDingbats', '', 10);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
     $pdf->SetFont('Arial', 'B', 9);
-    $pdf->Cell(35, 6, '__________', 'T,B', 1, 'L');
+    $pdf->Cell(35, 6, 'lainnya', 'T,B', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }
 
