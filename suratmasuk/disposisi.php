@@ -147,6 +147,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                                   <input type="checkbox" class="form-check-input" name="diteruskan[]" value="lainnya"/> Lainnya </label>
                               </div>
                   </div>
+                  <hr class="new4">
                   <div class="col-sm-1"></div>
               </div><br><br>
               <div class="row" style="color:black;">
@@ -155,6 +156,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                         <label class="form-check-label">
                           <input type="checkbox" class="form-check-input" name ="pilihan[]" value="TL"/><h5 class="card-title"><b>Tindak Lanjut</b></h5></label>
                   </div>
+                  
                   <p class="card-description"> Masukkan yang ingin dicentang </p>
                     <div class="form-group">
                       <div class="form-check">
@@ -262,6 +264,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                   <br>
                 </div>
                 </div>
+                <hr class="new4">
                 <div class="col-md-12" style="color:black;">
                   <p class="card-description"> Catatan khusus: </p>
                   <div class="form-group row">

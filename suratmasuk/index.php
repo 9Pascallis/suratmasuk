@@ -143,6 +143,10 @@ session_start();
                           $file=$data['file_pdf'];
                   ?>
                     <tr>
+                    <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
+                    <tr style="background-color:#FFC07C;color:#994F01;">
+                    <?php } else { ?>
+                    <tr><?php } ?>
                         <td><?=$noUrut++?></td> 
                         <td><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
