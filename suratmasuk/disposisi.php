@@ -39,10 +39,6 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
 
               <div class="d-flex justify-content-between align-items-center">
                 <h2><b>SURAT MASUK | DISPOSISI</b></h2>
-                <ol>
-                  <li><a href="../index.php">Home</a></li>
-                  <li>Disposisi</a></li>
-                </ol>
               </div>
             </div>
           </section>

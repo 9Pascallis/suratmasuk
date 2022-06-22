@@ -123,11 +123,6 @@ $(document).ready(function(){
 
         <div class="d-flex justify-content-between align-items-center">
           <h2><b>Surat Masuk | Edit Surat</b></h2>
-          <ol>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="../suratmasuk/index.php">Surat Masuk</a></li>
-            <li>Edit Surat</a></li>
-          </ol>
         </div>
       </div>
     </section>

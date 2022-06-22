@@ -33,11 +33,6 @@ if (!isset($_SESSION["user"])) {
 
               <div class="d-flex justify-content-between align-items-center">
                 <h2><b>Surat Masuk | Halaman Kepala</b></h2>
-                <ol>
-                  <li><a href="../index.php">Home</a></li>
-                  <li>Halaman Disposisi</a></li>
-                </ol>
-
               </div>
             </div>
           </section>
