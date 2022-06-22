@@ -52,24 +52,29 @@ if (!isset($_SESSION["login"])) {
               <div class="table-wrapper">
                 <br>
                 <div class="row">
-                  <div class="col-sm-2">
-                    <div class="form-group row">
-                        <div class="col-sm-9">
-                            <a href="../suratmasuk/tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
-                        </div>  
-                    </div>
-                  </div> 
-                  <div class="col-sm-6">
-                  </div> 
-                  <div class="col-sm-4">
-                    <form action="" method="post">
-                    <div class="input-group">
-                      <input type="text" name="keyword" class="form-control" placeholder="Masukan kata kunci pencarian" autocomplete="off" autofocus>
-                      <div class="input-group-append"></div>
-                          <button type="submit" name="cari" class="btn btn-success pl-4 pr-4">Cari</button>
+                <div class="position-relative">
+                    <div class="position-absolute top-0 end-0">
+                      <div class="input-group">
+                        <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
+                        <p>&ensp;&ensp;</p>
+                        <select name="pilihTahun" id="formTahun">
+                            <option value=''>Pilih Tahun</option>
+                            <?php
+                            $sql = "SELECT YEAR(tgl_agenda) FROM `surat_masuk` GROUP BY YEAR(tgl_agenda)";
+                            $hasil = mysqli_query($conn, $sql);
+                            while ($data = mysqli_fetch_array($hasil)) :
+                            ?>
+                                <option value="<?= $data[0]; ?>"><?= $data[0]; ?></option>
+                            <?php endwhile; ?>
+                        </select>
+                        <p>&ensp;&ensp;</p>
+                        <select name="pilihBulan" id="formBulan" required class="formBulan"></select>
+                        <p>&ensp;&ensp;</p>
+                        <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
                       </div>
-                    </form>
+                    </div>
                   </div>
+                  <br><br>
                 </div>
               </div>
               <table class="table table-striped table-hover table-bordered">
@@ -86,7 +91,6 @@ if (!isset($_SESSION["login"])) {
                       <th>Lampiran</th>
                       <th>Disp</th>
                       <th width="120px">Actions</th>
-                      <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -167,15 +171,6 @@ if (!isset($_SESSION["login"])) {
                             <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                        <td>
-                            <div>
-                                <span class="indicator online"></span> Online
-                            </div>
-                            
-                            <div>
-                                <span class="indicator offline"></span> Offline
-                            </div>
                         </td>
                     </tr>
                   <?php

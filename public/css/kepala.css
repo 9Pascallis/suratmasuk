@@ -294,7 +294,22 @@ body {
   /*--------------------------------------------------------------
   # input
   --------------------------------------------------------------*/
-
+  select {
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+  }
+*:focus {
+    outline: none;
+}
+  input {
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+  }
+  input:focus{
+    outline: none;
+}
   .form-control {
     display: block;
     width: 100%;

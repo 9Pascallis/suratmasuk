@@ -50,7 +50,34 @@ if (!isset($_SESSION["login"])) {
           <div class="containerbox">
             <div class="table-responsive">
               <h3><p class="text-center"><b>Bulan Maret 2022</b></p></h3>
-              <br><br>
+              <div class="table-wrapper">
+                <br>
+                <div class="row">
+                  <div class="position-relative">
+                    <div class="position-absolute top-0 end-0">
+                      <div class="input-group">
+                        <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
+                        <p>&ensp;&ensp;</p>
+                        <select name="pilihTahun" id="formTahun">
+                            <option value=''>Pilih Tahun</option>
+                            <?php
+                            $sql = "SELECT YEAR(tgl_agenda) FROM `surat_masuk` GROUP BY YEAR(tgl_agenda)";
+                            $hasil = mysqli_query($conn, $sql);
+                            while ($data = mysqli_fetch_array($hasil)) :
+                            ?>
+                                <option value="<?= $data[0]; ?>"><?= $data[0]; ?></option>
+                            <?php endwhile; ?>
+                        </select>
+                        <p>&ensp;&ensp;</p>
+                        <select name="pilihBulan" id="formBulan" required class="formBulan"></select>
+                        <p>&ensp;&ensp;</p>
+                        <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
+                      </div>
+                    </div>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
                   <table class="table table-striped table-hover table-bordered">
                     <thead>
                       <tr>
