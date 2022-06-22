@@ -92,7 +92,7 @@ if (!isset($_SESSION["login"])) {
                           <th>Lampiran</th>
                           <th style="text-align: center; ">File</th>
                           <th style="text-align: center; ">Disposisi</th>
-                          <th style="text-align: center; ">Disposisi</th>
+                          <th style="text-align: center; ">Action</th>
                       </tr>
                     </thead>
                     <tbody>
