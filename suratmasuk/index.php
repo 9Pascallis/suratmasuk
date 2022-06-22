@@ -50,36 +50,36 @@ session_start();
               <div class="table-wrapper">
                 <br>
                 <div class="row">
-                  <div class="col-sm-2">
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <a href="../suratmasuk/login.php" style="display: block"><button type="submit" class="btn btn-info">LOGIN</button></a>
-                        </div>  
-                    </div> 
-                  </div> 
-                  <div class="col-sm-2">
-                  </div> 
-
-                  <div class="col-sm-8">
-                    <div class="input-group">
-                      <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
-                      <p>&ensp;&ensp;</p>
-                      <select name="pilihTahun" id="formTahun">
-                          <option value=''>Pilih Tahun</option>
-                          <?php
-                          $sql = "SELECT YEAR(tgl_agenda) FROM `surat_masuk` GROUP BY YEAR(tgl_agenda)";
-                          $hasil = mysqli_query($conn, $sql);
-                          while ($data = mysqli_fetch_array($hasil)) :
-                          ?>
-                              <option value="<?= $data[0]; ?>"><?= $data[0]; ?></option>
-                          <?php endwhile; ?>
-                      </select>
-                      <p>&ensp;&ensp;</p>
-                      <select name="pilihBulan" id="formBulan" required class="formBulan"></select>
-                      <p>&ensp;&ensp;</p>
-                      <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
+                  <div class="position-relative">
+                    <div class="position-absolute top-0 start-0">
+                      <div class="form-group row">
+                          <div class="col-sm-4">
+                              <a href="../suratmasuk/login.php" style="display: block"><button type="submit" class="btn btn-info">LOGIN</button></a>
+                          </div>  
+                      </div> 
+                    </div>
+                    <div class="position-absolute top-0 end-0">
+                      <div class="input-group">
+                        <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
+                        <p>&ensp;&ensp;</p>
+                        <select name="pilihTahun" id="formTahun">
+                            <option value=''>Pilih Tahun</option>
+                            <?php
+                            $sql = "SELECT YEAR(tgl_agenda) FROM `surat_masuk` GROUP BY YEAR(tgl_agenda)";
+                            $hasil = mysqli_query($conn, $sql);
+                            while ($data = mysqli_fetch_array($hasil)) :
+                            ?>
+                                <option value="<?= $data[0]; ?>"><?= $data[0]; ?></option>
+                            <?php endwhile; ?>
+                        </select>
+                        <p>&ensp;&ensp;</p>
+                        <select name="pilihBulan" id="formBulan" required class="formBulan"></select>
+                        <p>&ensp;&ensp;</p>
+                        <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
+                      </div>
                     </div>
                   </div>
+                  <br><br>
 
                 </div>
               </div>
