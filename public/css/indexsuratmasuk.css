@@ -294,26 +294,22 @@ body {
   /*--------------------------------------------------------------
   # input
   --------------------------------------------------------------*/
-  .input-field-border-bottom {
-	border: 1px solid #ddd;
-	box-shadow: 0 3px 15px #888888;
-	display: inline-block;
-	padding: 2em; 
-	height: 980px;
-	width: 1300px;
-	margin: 40px 10px 40px 10px;
+  select {
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+  }
+*:focus {
+    outline: none;
 }
-  .input-field-border-bottom label {
-	color: #444444; 
-	display: block;
-	font-size: 15px;
-	font-weight: bold;
-	letter-spacing: 0.05em;
-	margin-bottom: 10px;
-	margin-top: 3px;
-	font-family: "Raleway";
+  input {
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+  }
+  input:focus{
+    outline: none;
 }
-
 
 .containerbox{
 	padding-left: 20px;
@@ -396,31 +392,6 @@ table.table td a.delete {
 table.table td i {
 	font-size: 19px;
 }   
-
-.indicator.online {
-	background: #28B62C;
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	border-radius: 50%;
-	-webkit-animation: pulse-animation 2s infinite linear;
-	}
-	
-	@-webkit-keyframes pulse-animation {
-	0% { -webkit-transform: scale(1); }
-	25% { -webkit-transform: scale(1); }
-	50% { -webkit-transform: scale(1.2) }
-	75% { -webkit-transform: scale(1); }
-	100% { -webkit-transform: scale(1); }
-	}
-	
-	.indicator.offline {
-	background: #FF4136;
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	
-	}
   /*--------------------------------------------------------------
   # Footer1
   --------------------------------------------------------------*/

@@ -42,6 +42,8 @@ session_start();
         <!-- ======= END BREADCRUMBS1 ======= -->
 
         <!-- ======= CONTAINER ======= -->
+
+
           <div class="containerbox">
             <div class="table-responsive">
               <h3><p class="text-center"><b>BULAN MARET 2022</b></p></h3>
@@ -50,22 +52,36 @@ session_start();
                 <div class="row">
                   <div class="col-sm-2">
                     <div class="form-group row">
-                        <div class="col-sm-9">
+                        <div class="col-sm-4">
                             <a href="../suratmasuk/login.php" style="display: block"><button type="submit" class="btn btn-info">LOGIN</button></a>
                         </div>  
+                    </div> 
                   </div> 
+                  <div class="col-sm-2">
                   </div> 
-                  <div class="col-sm-6">
-                  </div> 
-                  <div class="col-sm-4">
-                    <form action="" method="post">
+
+                  <div class="col-sm-8">
                     <div class="input-group">
-                      <input type="text" name="keyword" class="form-control" placeholder="Masukan kata kunci pencarian" autocomplete="off" autofocus>
-                      <div class="input-group-append"></div>
-                          <button type="submit" name="cari" class="btn btn-success pl-4 pr-4">Cari</button>
-                      </div>
-                    </form>
+                      <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
+                      <p>&ensp;&ensp;</p>
+                      <select name="pilihTahun" id="formTahun">
+                          <option value=''>Pilih Tahun</option>
+                          <?php
+                          $sql = "SELECT YEAR(tgl_agenda) FROM `surat_masuk` GROUP BY YEAR(tgl_agenda)";
+                          $hasil = mysqli_query($conn, $sql);
+                          while ($data = mysqli_fetch_array($hasil)) :
+                          ?>
+                              <option value="<?= $data[0]; ?>"><?= $data[0]; ?></option>
+                          <?php endwhile; ?>
+                      </select>
+                      <p>&ensp;&ensp;</p>
+                      <select name="pilihBulan" id="formBulan" required class="formBulan"></select>
+                      <p>&ensp;&ensp;</p>
+                      <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
+                    </div>
+
                   </div>
+
                 </div>
               </div>
               <table class="table table-striped table-hover table-bordered">
