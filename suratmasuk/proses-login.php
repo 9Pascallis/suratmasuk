@@ -7,7 +7,7 @@ if (isset($_POST['login'])){
     $password = $_POST['password'];
     $query = mysqli_query($conn,"select * from user where username='$username' and password='$password'");
     $hitung = mysqli_num_rows($query);
-    $_SESSION["login"] = true;
+    $_SESSION["user"] = true;
     if($hitung > 0){
         //Data ditemukan
         $ambildatarole = mysqli_fetch_array($query);
