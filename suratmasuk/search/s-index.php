@@ -1,6 +1,6 @@
 <?php
 
-require '../database/db.php';
+require '../../database/db.php';
 
 if(isset($_POST['keyword'])){
     $noUrut = 1;
@@ -28,19 +28,19 @@ if(isset($_POST['keyword'])){
 ?>
 
 <tr>
-<?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
+<?php if ($data['catatan'] === null || trim($data['catatan']) === "") { ?>
 <tr style="background-color:#FFC07C;color:#994F01;">
 <?php } else { ?>
 <tr><?php } ?>
-    <td style="text-align: center; "><?=$noUrut++?></td> 
-    <td style="text-align: center; "><?=$noAgenda?></td>
+    <td><?=$noUrut++?></td> 
+    <td><?=$noAgenda?></td>
     <td><?=$tglAgenda?></td>
-    <td style="text-align: center; "><?=$tk?></td>
+    <td><?=$tk?></td>
     <td><?=$tglSurat?></td>
-    <td style="text-align: center; "><?=$noSurat?></td>
-    <td style="text-align: center; "> <?=$asalSurat?></td>
-    <td style="text-align: center; "><?=$per?></td>
-    <td style="text-align: center; "><?=$lam?></td>
+    <td><?=$noSurat?></td>
+    <td> <?=$asalSurat?></td>
+    <td><?=$per?></td>
+    <td><?=$lam?></td>
     <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
     <td style="text-align: center; ">-</td>
     <?php } else { ?>
@@ -48,7 +48,7 @@ if(isset($_POST['keyword'])){
     <?php } ?>
     </td>
     <td style="text-align: center; ">
-    <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+    <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" ><i class="material-icons">&#xE431;</i></a>
     </td>
 </tr>
 

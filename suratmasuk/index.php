@@ -228,7 +228,7 @@ session_start();
         $("#keyword").keyup(function(){
           $.ajax({
             type: 'POST',
-            url: 'search.php',
+            url: 'search/s-index.php',
             data: {
               keyword: $(this).val()
             },

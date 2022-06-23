@@ -148,9 +148,10 @@ if (!isset($_SESSION["user"])) {
                           $per=$data['perihal'];
                           $lam=$data['lampiran'];
                           $file=$data['file_pdf'];
+                          $diteruskan=$data['diteruskan'];
                   ?>
                     <tr>
-                    <?php if ($data['file_pdf'] === null || trim($data['file_pdf']) === "") { ?>
+                    <?php if ($data['catatan'] === null || trim($data['catatan']) === "") { ?>
                     <tr style="background-color:#FFC07C;color:#994F01;">
                     <?php } else { ?>
                     <tr><?php } ?>
@@ -172,6 +173,7 @@ if (!isset($_SESSION["user"])) {
                         <td style="text-align: center; ">
                         <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view" ><i class="material-icons">&#xE431;</i></a>
                         </td>
+                        <td><?=$diteruskan?></td>
                     </tr>
                   <?php
                       };
@@ -226,7 +228,7 @@ if (!isset($_SESSION["user"])) {
         $("#keyword").keyup(function(){
           $.ajax({
             type: 'POST',
-            url: 'search.php',
+            url: 'search/s-koorbid.php',
             data: {
               keyword: $(this).val()
             },
