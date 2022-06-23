@@ -2,10 +2,10 @@
 session_start();
 
 require '../suratmasuk/function.php';
-if (!isset($_SESSION["login"])) {
-    echo "<script>alert('silahkan login dahulu');</script>";
-    echo "<script>location='login.php';</script>";
-  }
+// if (!isset($_SESSION["login"])) {
+//     echo "<script>alert('silahkan login dahulu');</script>";
+//     echo "<script>location='login.php';</script>";
+//   }
 //ambil data di URL
 $id = $_GET["id"];
 //query data mahasiswa

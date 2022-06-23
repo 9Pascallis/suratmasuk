@@ -88,7 +88,8 @@ if (!isset($_SESSION["user"])) {
                           <th>Lampiran</th>
                           <th style="text-align: center; ">File</th>
                           <th style="text-align: center; ">Disposisi</th>
-                          <th style="text-align: center; ">Action</th>
+                          <th style="text-align: center; ">View Disposisi</th>
+                          <!-- <th style="text-align: center; ">Action</th> -->
                       </tr>
                     </thead>
                     <tbody id="tampil">
@@ -170,13 +171,15 @@ if (!isset($_SESSION["user"])) {
                         <?php } ?>
                         </td>
                         <td style="text-align:center;">
-                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td style="text-align:center;">
-                            <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                        </td>
+                        <!-- <td style="text-align:center;">
                             <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
+                        </td> -->
                       </tr>
                       <?php
                           };

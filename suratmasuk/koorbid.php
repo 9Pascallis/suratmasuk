@@ -88,6 +88,7 @@ if (!isset($_SESSION["user"])) {
                       <th>Lampiran</th>
                       <th style="text-align: center; ">File</th>
                       <th style="text-align: center; ">Disposisi</th>
+                      <th style="text-align: center; ">Status Disposisi</th>
                   </tr>
                 </thead>
                 <tbody id="tampil">
