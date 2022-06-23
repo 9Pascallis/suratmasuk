@@ -17,6 +17,7 @@ if (!isset($_SESSION["user"])) {
       <?php require('../layout/head.php')?>
       <link href="../public/css/kepala.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
+      <script scr="public/js/jquery.min.js"></script>
   </head>
 <!-- ======= END HEAD ======= -->
 
@@ -90,7 +91,7 @@ if (!isset($_SESSION["user"])) {
                           <th style="text-align: center; ">Action</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tampil">
                       <?php
                         $dataPerHal=70;
                         $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC"));
@@ -223,6 +224,25 @@ if (!isset($_SESSION["user"])) {
         <!-- ======= END CONTAINER ======= -->
       </main>
     <!-- ======= END MAIN ======= -->
+
+    <!-- ======= Live Search =======-->
+    <script>
+      $(document).ready(function(){
+        $("#keyword").keyup(function(){
+          $.ajax({
+            type: 'POST',
+            url: 'search.php',
+            data: {
+              keyword: $(this).val()
+            },
+            cache: false,
+            success: function(data){
+              $("#tampil").html(data);
+            }
+        });
+        });
+      });
+    </script>
   </body>
 <!-- ======= END BODY ======= -->
 

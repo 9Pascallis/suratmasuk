@@ -221,6 +221,8 @@ session_start();
         <!-- ======= END CONTAINER ======= -->
       </main>
     <!-- ======= END MAIN ======= -->
+    
+    <!-- ======= Live Search =======-->
     <script>
       $(document).ready(function(){
         $("#keyword").keyup(function(){
