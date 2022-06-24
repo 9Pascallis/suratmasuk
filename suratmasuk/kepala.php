@@ -41,7 +41,7 @@ if (!isset($_SESSION["user"])) {
 
         <!-- ======= CONTAINER ======= -->
         <div class="fixlogin">
-        <a href="proses-logout.php" style="display: block"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
+        <a href="proses-logout.php" style="display: block  position-absolute top-0 end-0"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
         </div>
           <div class="containerbox">
             <div class="table-responsive">
