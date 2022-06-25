@@ -307,10 +307,11 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                               class="form-control"
                               id="exampleTextarea1"
                               rows="5" name="catatan"
+                              required
                             ></textarea>
                           </div>
                         </div><br><br>
-                        
+
                 <!-- ======= VIEW PDF ======= -->
                 <div class="iframe-container">
                     <!--belum bisa manggil, hny contoh-->
