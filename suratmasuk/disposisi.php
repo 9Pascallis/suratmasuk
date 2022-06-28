@@ -74,7 +74,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                             <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">Tanggal Terima</label>
                     </div>
                     <div class="col-sm-10">
-                            <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">: <?= $ambil_data['tgl_agenda'] ?></label>     
+                            <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">: <?= tanggal_indo($ambil_data['tgl_agenda']) ?></label>    
                     </div>
                 </div>
                 <div class="row">
@@ -90,7 +90,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                             <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">Tanggal Surat</label>
                     </div>
                     <div class="col-sm-10">
-                            <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">: <?= $ambil_data['tgl_surat'] ?></label>     
+                            <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">: <?= tanggal_indo($ambil_data['tgl_surat']) ?></label>     
                     </div>
                 </div>
                 <div class="row">
@@ -315,7 +315,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                 <!-- ======= VIEW PDF ======= -->
                 <div class="iframe-container">
                     <!--belum bisa manggil, hny contoh-->
-                    <iframe src="../berkas/m-222-202206-awr.pdf" width="1000px" height="500px" style="text-align:center;"></iframe>
+                    <iframe src="<?= "../berkas/" . $ambil_data['file_pdf']; ?>" width="1000px" height="500px" style="text-align:center;"></iframe>
                 </div>
 
                 <br><br>
