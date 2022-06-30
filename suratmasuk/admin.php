@@ -1,10 +1,16 @@
 <?php
 require '../database/db.php';
+setlocale (LC_TIME, 'IND');
+
 session_start();
 if (!isset($_SESSION["user"])) {
   echo "<script>alert('silahkan login dahulu');</script>";
   header("Location: login.php");
   exit;
+}else{
+  $role = $_SESSION["role"];
+  $query = $_SESSION["query"];
+
 }
 ?>
 
@@ -13,7 +19,7 @@ if (!isset($_SESSION["user"])) {
 
 <!-- ======= HEAD ======= -->
   <head>
-    <title>Surat Masuk | Halaman Admin</title>
+    <title>Surat Masuk </title>
       <?php require('../layout/head.php')?>
       <link href="../public/css/indexsuratmasuk.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
@@ -33,7 +39,7 @@ if (!isset($_SESSION["user"])) {
             <div class="container">
 
               <div class="d-flex justify-content-between align-items-center">
-                <h2><b>Surat Masuk | Halaman Admin</b></h2>
+                <h2><b>Surat Masuk </b></h2>
               </div>
             </div>
           </section>
@@ -41,25 +47,30 @@ if (!isset($_SESSION["user"])) {
 
         <!-- ======= CONTAINER ======= -->
         <div class="fixlogin">
-        <a href="proses-logout.php" style="display: block  position-absolute top-0 end-0"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
+        <a href="proses-logout.php" style="display: block"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
         </div>
           <div class="containerbox">
             <div class="table-responsive">
-              <h3><p class="text-center"><b>BULAN MARET 2022</b></p></h3>
+              <h3><p class="text-center"><b>BULAN <?= strtoupper(strftime( "%B", time()));?>  <?=date('Y')?> </b></p></h3>
               <div class="table-wrapper">
                 <br>
                 <div class="row">
                 <div class="position-relative">
-                    <div class="position-absolute top-0 start-0">
-                      <div class="form-group row">
-                          <a href="../suratmasuk/tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
-                      </div> 
-                    </div>
+                  <?php 
+                  if($role=='admin'){
+                    print
+                    '<div class="position-absolute top-0 start-0">
+                    <div class="form-group row">
+                    <a href="../suratmasuk/tambahsurat.php" style="display: block"><button type="submit" class="btn btn-primary">Tambah Surat</button></a>
+                    </div> 
+                    </div>';
+                  }
+                  ?>
                     <div class="position-absolute top-0 end-0">
                       <div class="input-group">
                         <input type="text" name="keyword" size="40" placeholder="Masukkan kata pencarian" autocomplete="off" id="keyword">
                         <p>&ensp;&ensp;</p>
-                        <select name="pilihTahun" id="formTahun">
+                        <select name="pilihTahun" id="pilihTahun">
                             <option value=''>Pilih Tahun</option>
                             <?php
                             $sql = "SELECT YEAR(tgl_agenda) FROM `surat_masuk` GROUP BY YEAR(tgl_agenda)";
@@ -70,7 +81,16 @@ if (!isset($_SESSION["user"])) {
                             <?php endwhile; ?>
                         </select>
                         <p>&ensp;&ensp;</p>
-                        <select name="pilihBulan" id="formBulan" required class="formBulan"></select>
+                        <select name="pilihBulan" id="pilihBulan">
+                        <option value=''>Pilih Bulan</option>
+                          <?php
+                          $sql = "SELECT MONTH(tgl_agenda) FROM `surat_masuk` GROUP BY MONTH(tgl_agenda)";
+                          $hasil = mysqli_query($conn, $sql);
+                          while ($data = mysqli_fetch_array($hasil)) :
+                          ?>
+                            <option value="<?= $data[0]; ?>"><?= $data[0]; ?></option>
+                          <?php endwhile; ?>
+                        </select>                        
                         <p>&ensp;&ensp;</p>
                         <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
                       </div>
@@ -93,15 +113,18 @@ if (!isset($_SESSION["user"])) {
                       <th>Lampiran</th>
                       <th style="text-align:center;">File</th>
                       <th style="text-align:center;">Disposisi</th>
-                      <th style="text-align:center;">View Disposisi</th>
-                      <th style="text-align:center;">Status</th>
-                      <th style="text-align:center;" width="120px">Action</th>
+                      <th style="text-align: center; ">Status Disposisi</th>
+                      <?php
+                      if($role=='admin'){
+                      echo '<th style="text-align:center;" width="120px">Actions</th>';
+                        }
+                      ?>
                   </tr>
                 </thead>
                 <tbody id="tampil">
                   <?php
                       $dataPerHal=70;
-                      $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC"));
+                      $banyakData=mysqli_num_rows(mysqli_query($conn,"SELECT * FROM surat_masuk $query ORDER BY id DESC"));
                       $banyakHal=ceil($banyakData/$dataPerHal);
                           if(isset($_GET['halaman'])){
                               $halAktif=$_GET['halaman'];
@@ -124,23 +147,9 @@ if (!isset($_SESSION["user"])) {
                         $end_number = $banyakHal; 
                       }
                       
-                      // <<<<<<<<<<<<<<<<<<<<<<<SEARCH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                      if(isset($_POST['cari'])){
-                          $keyword = $_POST['keyword'];
-                          $tampil = mysqli_query($conn,"SELECT*FROM surat_masuk WHERE no_agenda LIKE'%$keyword' OR
-                          tk_keamanan LIKE '%$keyword' OR
-                          tgl_agenda LIKE '%$keyword' OR
-                          tgl_surat LIKE '%$keyword%' OR
-                          no_surat like '%$keyword%' OR
-                          asal_surat LIKE '%$keyword' OR
-                          perihal like '%$keyword'
-                          ORDER BY id DESC
-                          LIMIT $dataawal, $dataPerHal
-                          ");
-                        }
-                        else{
-                          $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk ORDER BY id DESC LIMIT $dataawal, $dataPerHal ");
-                            }
+            
+                          $tampil = mysqli_query($conn,"SELECT * FROM surat_masuk   $query ORDER BY id DESC LIMIT $dataawal, $dataPerHal ");
+                    
 
                       $noUrut = 1;
 
@@ -155,6 +164,8 @@ if (!isset($_SESSION["user"])) {
                           $per=$data['perihal'];
                           $lmpr=$data['lampiran'];
                           $file=$data['file_pdf'];
+                          $diteruskan=$data['diteruskan'];
+
                   ?>
                     <tr>
                     <?php if ($data['catatan'] === null || trim($data['catatan']) === "") { ?>
@@ -177,19 +188,20 @@ if (!isset($_SESSION["user"])) {
                         <?php } ?>
                         </td>
                         <td style="text-align:center;">
-                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
-                        <td style="text-align:center;">
-                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                        </td>
-                        <td style="text-align:center;">
-                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"></a>
-                        </td>
-                        <td style="text-align:center;">
-                            
-                            <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
+                        <td><?=$diteruskan?></td>
+                        <?php
+                          $id = $data['id'];
+                          if($role=='admin'){
+                          echo '
+                            <td style="text-align:center;">
+                              <a href="../suratmasuk/disposisi.php?id=.$id." target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                              <a href="../suratmasuk/editsurat.php?id=.$id." class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                              <a href="../suratmasuk/delete_masuk.php?id=.$id." class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            </td>';
+                         }
+                         ?>
                     </tr>
                   <?php
                       };
@@ -197,40 +209,40 @@ if (!isset($_SESSION["user"])) {
                 </tbody>
               </table>
               <nav>
-              <ul class="pagination justify-content-center">
-                  <!-- ============Previous============ -->
-                  <?php
-                  if($halAktif<=1){
-                  ?>
-                  <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
-                  <?php
-                  }else{?>
-                  <li class="page-item"><a href="?halaman=<?php echo $halAktif-1; ?>" class="page-link">Previous</a></li>
-                  <?php
-                  }
-                  ?>
-                  <!-- ==============end Previous=============== -->
-                
-                  <?php for($i=$start_number; $i<=$end_number; $i++){
-                  ?>
-                  <li class="pge-item"><a href="?halaman=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
-                  <?php
-                  }//end for
-                  ?>
+              <ul class="pagination justify-content-center" id='pagination'>
+                <!-- ============Previous============ -->
+                <?php
+                if ($halAktif <= 1) {
+                ?>
+                  <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif - 1; ?>" class="page-link">Previous</a></li>
+                <?php
+                } else { ?>
+                  <li class="page-item"><a href="?halaman=<?php echo $halAktif - 1; ?>" class="page-link">Previous</a></li>
+                <?php
+                }
+                ?>
+                <!-- ==============end Previous=============== -->
 
-                  <!-- ============Next============ -->
-                  <?php
-                  if($halAktif >= $banyakHal){
-                  ?>
-                  <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
-                  <?php
-                  }else{?>
-                  <li class="page-item"><a href="?halaman=<?php echo $halAktif+1; ?>" class="page-link">Next</a></li>
-                  <?php
-                  }
-                  ?>
-                  <!-- ==============end Next=============== -->
-                </ul>
+                <?php for ($i = $start_number; $i <= $end_number; $i++) {
+                ?>
+                  <li class="pge-item"><a href="?halaman=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
+                <?php
+                } //end for
+                ?>
+
+                <!-- ============Next============ -->
+                <?php
+                if ($halAktif >= $banyakHal) {
+                ?>
+                  <li class="page-item disabled"><a href="?halaman=<?php echo $halAktif + 1; ?>" class="page-link">Next</a></li>
+                <?php
+                } else { ?>
+                  <li class="page-item"><a href="?halaman=<?php echo $halAktif + 1; ?>" class="page-link">Next</a></li>
+                <?php
+                }
+                ?>
+                <!-- ==============end Next=============== -->
+              </ul>
               </nav>            
             </div>
           </div> 
@@ -240,22 +252,54 @@ if (!isset($_SESSION["user"])) {
 
     <!-- ======= Live Search =======-->
     <script>
-      $(document).ready(function(){
-        $("#keyword").keyup(function(){
-          $.ajax({
-            type: 'POST',
-            url: 'search/s-admin.php',
-            data: {
-              keyword: $(this).val()
-            },
-            cache: false,
-            success: function(data){
-              $("#tampil").html(data);
-            }
+
+    $(document).ready(function() {
+  
+      var roleUser = `<?php echo $_SESSION["role"] ?>` || '';
+
+      load_data('','','');
+
+      function load_data(keyword, pilihTahun, pilihBulan) {
+        $('#pagination').empty()
+        $.ajax({
+          method: "POST",
+          url: "search/s-index.php",
+          data: {
+            keyword: keyword,
+            pilihTahun: pilihTahun,
+            pilihBulan: pilihBulan,
+            role:roleUser
+
+          },
+          success: function(data) {
+            $('#tampil').html(data);
+          }
         });
-        });
+      }
+      $('#keyword').keyup(function() {
+        var keyword = $("#keyword").val();
+        var pilihTahun = $("#pilihTahun").val();
+        var pilihBulan = $("#pilihBulan").val();
+        load_data(keyword, pilihTahun, pilihBulan);
       });
-    </script>
+      $('#pilihTahun').change(function() {
+        console.log('ok')
+        var keyword = $("#keyword").val();
+        var pilihTahun = $("#pilihTahun").val();
+        var pilihBulan = $("#pilihBulan").val();
+        load_data(keyword, pilihTahun, pilihBulan);
+      });
+      $('#pilihBulan').change(function() {
+        console.log('ok')
+        var keyword = $("#keyword").val();
+        var pilihTahun = $("#pilihTahun").val();
+        var pilihBulan = $("#pilihBulan").val();
+        load_data(keyword, pilihTahun, pilihBulan);
+      });
+    });
+
+
+  </script>
   </body>
 <!-- ======= END BODY ======= -->
 
