@@ -41,7 +41,7 @@ if (!isset($_SESSION["user"])) {
 
         <!-- ======= CONTAINER ======= -->
         <div class="fixlogin">
-        <a href="proses-logout.php" style="display: block"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
+        <a href="proses-logout.php" style="display: block  position-absolute top-0 end-0"><button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin Logout ?')">LOGOUT</button></a>
         </div>
           <div class="containerbox">
             <div class="table-responsive">
@@ -93,7 +93,9 @@ if (!isset($_SESSION["user"])) {
                       <th>Lampiran</th>
                       <th style="text-align:center;">File</th>
                       <th style="text-align:center;">Disposisi</th>
-                      <th style="text-align:center;" width="120px">Actions</th>
+                      <th style="text-align:center;">View Disposisi</th>
+                      <th style="text-align:center;">Status</th>
+                      <th style="text-align:center;" width="120px">Action</th>
                   </tr>
                 </thead>
                 <tbody id="tampil">
@@ -175,10 +177,16 @@ if (!isset($_SESSION["user"])) {
                         <?php } ?>
                         </td>
                         <td style="text-align:center;">
-                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
+                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE431;</i></a>
                         </td>
                         <td style="text-align:center;">
-                            <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                          <a href="../suratmasuk/cetak_disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                        </td>
+                        <td style="text-align:center;">
+                        <a href="../suratmasuk/disposisi.php?id=<?=$data['id']?>" target="_blank" class="view"  data-toggle="tooltip"></a>
+                        </td>
+                        <td style="text-align:center;">
+                            
                             <a href="../suratmasuk/editsurat.php?id=<?php echo $data['id'];?>" class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="../suratmasuk/delete_masuk.php?id=<?php echo $data['id'];?>" class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
