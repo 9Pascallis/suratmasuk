@@ -12,37 +12,45 @@ if (isset($_POST['login'])){
         //Data ditemukan
         $ambildatarole = mysqli_fetch_array($query);
         $role = $ambildatarole['role'];
+        if(isset($role)){
+            $_SESSION['log'] = 'Logged';
+            $_SESSION['role'] = $role;
+            $_SESSION['query'] = "WHERE diteruskan LIKE '%".$role."%'";
 
-        if($role == 'admin'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'admin';
+
             echo "<script>location.href=\"admin.php\";</script>";
-        }else if($role == 'kepala'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'kepala';
-            echo "<script>location.href=\"kepala.php\";</script>";
-        }else if($role == 'kstu'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'kstu';
-            echo "<script>location.href=\"koorbid.php\";</script>";
-        }else if($role == 'kdat'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'kdat';
-            echo "<script>location.href=\"koorbid.php\";</script>";
-        }else if($role == 'kobs'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'kdat';
-            echo "<script>location.href=\"koorbid.php\";</script>";
-        }else if($role == 'ppk'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'kdat';
-            echo "<script>location.href=\"koorbid.php\";</script>";
-        }else if($role == 'operator'){
-            $_SESSION['log'] = 'Logged';
-            $_SESSION['role'] = 'operator';
-            echo "<script>
-            location.href=\"admin.php\"
-            ;</script>";
+
+        }
+        // if($role == 'admin'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'admin';
+        //     echo "<script>location.href=\"admin.php\";</script>";
+        // }else if($role == 'kepala'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'kepala';
+        //     echo "<script>location.href=\"kepala.php\";</script>";
+        // }else if($role == 'kstu'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'kstu';
+        //     echo "<script>location.href=\"koorbid.php\";</script>";
+        // }else if($role == 'kdat'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'kdat';
+        //     echo "<script>location.href=\"koorbid.php\";</script>";
+        // }else if($role == 'kobs'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'kdat';
+        //     echo "<script>location.href=\"koorbid.php\";</script>";
+        // }else if($role == 'ppk'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'kdat';
+        //     echo "<script>location.href=\"koorbid.php\";</script>";
+        // }else if($role == 'operator'){
+        //     $_SESSION['log'] = 'Logged';
+        //     $_SESSION['role'] = 'operator';
+        //     echo "<script>
+        //     location.href=\"admin.php\"
+        //     ;</script>";
         }else{
             echo "<script type ='text/javascript'>alert('Username atau Password salah');
         location.href=\"login.php\"
@@ -54,7 +62,7 @@ if (isset($_POST['login'])){
         location.href=\"login.php\"
         ;</script>";
     }
-    }
+    
     // if(mysqli_num_rows($query) !== 0){
     //     $_SESSION["user"] = $query->fetch_assoc();
     //     header("location:index.php");
