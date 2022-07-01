@@ -64,7 +64,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
-                            <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">Tingkat Keamanan</label>
+                            <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">Tk. Keamanan</label>
                     </div>
                     <div class="col-sm-10">
                             <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;">: <?= $ambil_data['tk_keamanan'] ?></label>     
