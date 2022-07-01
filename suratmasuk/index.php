@@ -40,9 +40,7 @@ session_start();
     <!-- ======= CONTAINER ======= -->
     <div class="containerbox">
       <div class="table-responsive">
-        <h3>
-          <p class="text-center"><b>BULAN MARET 2022</b></p>
-        </h3>
+        <h3><p class="text-center"><b>BULAN <?= strtoupper(strftime( "%B", time()));?>  <?=date('Y')?> </b></p></h3>
         <div class="table-wrapper">
           <br>
           <div class="row">
