@@ -24,7 +24,7 @@ if (isset($_POST["tambah"])) {
         echo "
             <script>
                 alert('data berhasil ditambah');
-                document.location.href = '../suratmasuk/index.php';
+                document.location.href = '../suratmasuk/admin.php';
             </script>
                 ";
     } else {
