@@ -21,7 +21,7 @@ if (isset($_POST["edit"])) {
         echo "
             <script>
                 alert('data berhasil ubah');
-                document.location.href = '../suratmasuk/index.php';
+                document.location.href = '../suratmasuk/admin.php';
             </script>
                 ";
     } else {
