@@ -220,9 +220,9 @@ $(document).ready(function(){
                         <div class="col-sm-7">
                         <select class="custom-select mr-sm-2" name="tk_keamanan" id="inlineFormCustomSelect"value="<?= $mhs["tk_keamanan"]; ?>">
                             <option selected>-</option>
-                            <option value="1">Biasa</option>
-                            <option value="2">Penting</option>
-                            <option value="3">Segera</option>
+                            <option value="Biasa">Biasa</option>
+                            <option value="Penting">Penting</option>
+                            <option value="Segera">Segera</option>
                         </select>
                         </div>
                     </div>
@@ -242,7 +242,7 @@ $(document).ready(function(){
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen</label>
                         <div class="col-sm-9">
                         <div class="custom-file">
-                            <input type="file" class="form-control" name="file_pdf" id="formFile" value="<?= $mhs["file_pdf"]; ?>">
+                            <input type="file" class="form-control" name="file_pdf" id="formFile" placeholder="" src="file_pdf" value="<?= $mhs["file_pdf"]; ?>">
                         </div>
                         </div>
                     </div>
