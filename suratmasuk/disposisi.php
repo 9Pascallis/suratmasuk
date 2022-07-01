@@ -53,7 +53,6 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                 <br>
                 <h3 style="text-align:center"><b>DISPOSISI</b></h3>
                 <br><br>
-                <form method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-sm-2">
                             <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;" >No Agenda</label>
@@ -151,44 +150,30 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                   
                   <br>
                   <br>
+                  <form action="" method="post">
                   <hr>
                 <div class="row" style="color:black;">
-                <div class="col-sm-2">     
-                  </div>
-                  <div class="col-sm-2">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-1">
+                </div>    
+                <div class="col-sm-2">
                               <div class="form-check form-check-primary position-absolute top-0 start-75 end-0">
-                              <label class="form-check-label" style="color:black;">
-                        <input type="checkbox" class="form-check-input" name ="pilihan[]" value="TL"/><h5 class="card-title"><b>Tindak Lanjut</b></h5></label>
+                                <label class="form-check-label" style="color:black;">
+                                <input type="checkbox" class="form-check-input" name ="pilihan[]" value="TL"/><h5 class="card-title"><b>Tindak Lanjut</b></h5></label>
                               </div>
-                  </div>
-                  <div class="col-sm-2">
+                </div>  
 
-                  </div>
                   <div class="col-sm-2">
                               <div class="form-check form-check-primary position-absolute top-0 start-100 end-0">
-                              <label class="form-check-label" style="color:black;">
-                        <input type="checkbox" class="form-check-input" name="pilihan[]" value="diketahui"/><h5 class="card-title"><b>Diketahui</b></h5></label>
+                                <label class="form-check-label" style="color:black;">
+                                <input type="checkbox" class="form-check-input" name="pilihan[]" value="diketahui"/><h5 class="card-title"><b>Diketahui</b></h5></label>
                               </div>
                   </div>
-                  <div class="col-sm-2">
-                  </div>
-                  <div class="col-sm-2">
-                  </div>
-
                   
-                  <div class="col-md-3"><br>
-                    <div class="form-group">
-
-                  </div>
-                  </div>
-                  <div class="col-md-3"><br>
-                    <div class="form-group">
-                      
-                    </div>
-                  </div>
-                  </div>
-                  <hr>
                 </div>
+                <br>
+                <hr>
 
 
                 <div class="row" style="color:black;">
