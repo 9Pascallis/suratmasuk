@@ -3,7 +3,19 @@
 <?php
 setlocale (LC_TIME, 'IND');
 ?>
+<?php
 
+// $filter = "WHERE YEAR(tgl_agenda)='". $_POST['pilihTahun']."' ";
+$keyword = $_POST['keyword'];
+$filter ="WHERE YEAR(tgl_agenda)='". $_POST['pilihTahun']."' AND no_agenda LIKE'%$keyword' OR
+tk_keamanan LIKE '%$keyword' OR
+tgl_agenda LIKE '%$keyword' OR
+tgl_surat LIKE '%$keyword%' OR
+no_surat like '%$keyword%' OR
+asal_surat LIKE '%$keyword' OR
+perihal like '%$keyword'
+"
+?>
 <head>
 	<title>Export Excel</title>
 </head>

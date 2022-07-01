@@ -53,6 +53,7 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                 <br>
                 <h3 style="text-align:center"><b>DISPOSISI</b></h3>
                 <br><br>
+                <form method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-sm-2">
                             <label for="colFormLabel" class="col-sm-12 col-form-label" style="color:black;" >No Agenda</label>
@@ -150,7 +151,6 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
                   
                   <br>
                   <br>
-                  <form action="" method="post">
                   <hr>
                 <div class="row" style="color:black;">
                 <div class="col-sm-2">     
