@@ -78,7 +78,7 @@ session_start();
                     <?php endwhile; ?>
                   </select>
                   <p>&ensp;&ensp;</p>
-                  <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
+                  <a href="../suratmasuk/excel.php" style="display: block"><button type="submit" class="btn btn-primary">Export to Excel</button></a>
                 </div>
               </div>
             </div>

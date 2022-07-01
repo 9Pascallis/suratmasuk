@@ -114,7 +114,7 @@ if (in_array('kstu',$tek)) {
     $pdf->Cell(45, 6, 'Kasubag Tata Usaha', 'T,B', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 } else {
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     // $pdf->SetTextColor(200, 200, 200);
     $pdf->Cell(5, 6, '', 'T,B', 0, 'L');
     $pdf->SetFont('ZapfDingbats', '', 10);
@@ -131,7 +131,7 @@ if (in_array('kdat',$tek)) {
     $pdf->Cell(35, 6, 'KoorBid Datin', 'T,B', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 } else {
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     // $pdf->SetTextColor(200, 200, 200);
     $pdf->SetFont('ZapfDingbats', '', 10);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
@@ -147,7 +147,7 @@ if (in_array('kobs',$tek)) {
     $pdf->Cell(40, 6, 'KoorBid Observasi', 'T,B', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 } else {
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     // $pdf->SetTextColor(200, 200, 200);
     $pdf->SetFont('ZapfDingbats', '', 10);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
@@ -163,7 +163,7 @@ if (in_array('ppk',$tek)){
     $pdf->Cell(20, 6, 'PPK', 'T,B', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 } else {
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     // $pdf->SetTextColor(200, 200, 200);
     $pdf->SetFont('ZapfDingbats', '', 10);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
@@ -179,7 +179,7 @@ if (in_array('user',$tek)) {
     $pdf->Cell(35, 6, 'lainnya', 'T,B', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 } else {
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     // $pdf->SetTextColor(200, 200, 200);
     $pdf->SetFont('ZapfDingbats', '', 10);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
@@ -214,7 +214,7 @@ if (in_array('tindaklanjut',$pilihan)) {
     $pdf->Cell(50, 6, 'Tindak Lanjut', 'T,B', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->Cell(65, 6, '', 'T,B', 0, 'L');
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
@@ -229,7 +229,7 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(75, 6, 'Diketahui', 'T,B', 1, 'L');
 $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 6, chr(111), 'T,B', 0);
     $pdf->SetFont('Arial', 'B', 10);
@@ -273,7 +273,7 @@ if (in_array('mewakili',$opsi)) {
     $pdf->Cell(55, 5, 'Harap Mewakili', 'T', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), 'T', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -287,7 +287,7 @@ if (in_array('konsultasi',$opsi)) {
     $pdf->Cell(45, 5, 'Dikonsultasikan dengan', 'T', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), 'T', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -301,7 +301,7 @@ if (in_array('diteruskan',$opsi)) {
     $pdf->Cell(32, 5, 'Untuk diteruskan', 'T', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), 'T', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -315,7 +315,7 @@ if (in_array('dimonitor',$opsi)) {
     $pdf->Cell(54, 5, 'Untuk dimonitor', 'T', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), 'T', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -330,7 +330,7 @@ if(in_array('mendampingi',$opsi)){
     $pdf->Cell(55, 5, 'Hadir mendampingi', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -344,7 +344,7 @@ if(in_array('jawaban',$opsi)){
     $pdf->Cell(45, 5, 'Dibuat surat jawaban', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -358,7 +358,7 @@ if(in_array('diselesaikan',$opsi)){
     $pdf->Cell(32, 5, 'Untuk diselesaikan', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -372,7 +372,7 @@ if(in_array('masukan',$opsi)){
     $pdf->Cell(54, 5, 'Untuk dijadikan bahan masukan', '0', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -388,7 +388,7 @@ if(in_array('tindaklanjut',$opsi)){
     $pdf->Cell(55, 5, 'Segera ditindaklanjuti', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -402,7 +402,7 @@ if(in_array('monitoring',$opsi)){
     $pdf->Cell(45, 5, 'Bahan monitoring', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -416,7 +416,7 @@ if(in_array('dipelajari',$opsi)){
     $pdf->Cell(32, 5, 'Untuk dipelajari', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -430,7 +430,7 @@ if(in_array('diskusi',$opsi)){
     $pdf->Cell(54, 5, 'Untuk didiskusikan dengan...', '0', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -445,7 +445,7 @@ if(in_array('masukan',$opsi)){
     $pdf->Cell(55, 5, 'Mohon tanggapan/saran/masukan', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -459,7 +459,7 @@ if(in_array('edaran',$opsi)){
     $pdf->Cell(45, 5, 'Buat Surat Edaran', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -473,7 +473,7 @@ if(in_array('diketahui',$opsi)){
     $pdf->Cell(32, 5, 'Untuk diketahui', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -487,7 +487,7 @@ if(in_array('koordinasi',$opsi)){
     $pdf->Cell(54, 5, 'Untuk dikoordinasikan dengan...', '0', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -502,7 +502,7 @@ if(in_array('fasilitas',$opsi)){
     $pdf->Cell(55, 5, 'Fasilitasi sesuai ketetapan berlaku', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -516,7 +516,7 @@ if(in_array('tugas',$opsi)){
     $pdf->Cell(45, 5, 'Untuk dibuat Surat Tugas', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -530,7 +530,7 @@ if(in_array('direkap',$opsi)){
     $pdf->Cell(32, 5, 'Untuk direkap ', '0', 0, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -544,7 +544,7 @@ if(in_array('diarsipkan',$opsi)){
     $pdf->Cell(54, 5, 'Untuk diarsipkan', '0', 1, 'L');
     $pdf->SetTextColor(0, 0, 0);
 }else{
-    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetTextColor(87, 87, 87);
     $pdf->SetFont('ZapfDingbats', '', 11);
     $pdf->Cell(3.5, 5, chr(111), '0', 0);
     $pdf->SetFont('Arial', '', 9);
@@ -552,7 +552,7 @@ if(in_array('diarsipkan',$opsi)){
 }
 // $catatan = explode(',', $row['catatan']);
     $pdf->SetTextColor(0, 0, 0);
-    $pdf->SetFont('Arial', '', 9);
+    $pdf->SetFont('Arial', 'B', 12);
     $pdf->Cell(200, 5, 'Catatan Khusus:', 'T', 1, 'L');
     $pdf->Cell(200, 5, $row['catatan'], 'T', 1,'L');
 

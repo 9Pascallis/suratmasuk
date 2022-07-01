@@ -39,7 +39,7 @@ if (!isset($_SESSION["user"])) {
             <div class="container">
 
               <div class="d-flex justify-content-between align-items-center">
-                <h2><b>Surat Masuk </b></h2>
+                <h2><b>Surat Masuk <?=$_SESSION['role'];?></b></h2>
               </div>
             </div>
           </section>
@@ -92,7 +92,7 @@ if (!isset($_SESSION["user"])) {
                           <?php endwhile; ?>
                         </select>                        
                         <p>&ensp;&ensp;</p>
-                        <input type="button" onclick="tableToExcel('testTable', 'Daftar Alat')" value="Export to Excel">
+                        <a href="../suratmasuk/excel.php" style="display: block"><button type="submit" class="btn btn-primary">Export to Excel</button></a>
                       </div>
                     </div>
                   </div>

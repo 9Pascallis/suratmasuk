@@ -349,12 +349,9 @@ $ambil_data = mysqli_fetch_array($suratmasuk);
   
           $query = ("update surat_masuk set diteruskan='$diteruskan', pilihan='$pilihan', opsi='$opsi', catatan='$catatan' where id='$id_dis'");
           mysqli_query($conn, $query);
-          // echo "<pre>";
-          // print_r($query);
-          // echo "</pre>";
           if ($query) {
             echo "<script>alert( 'disposisi berhasil diinput!' );</script>";
-            echo "<script>location = 'index.php';</script>";
+            echo "<script>location = 'admin.php';</script>";
            } 
         }
        ?>
