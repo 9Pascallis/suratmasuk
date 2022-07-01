@@ -21,7 +21,7 @@ if (!isset($_SESSION["user"])) {
   <head>
     <title>Surat Masuk </title>
       <?php require('../layout/head.php')?>
-      <link href="../public/css/indexsuratmasuk.css" rel="stylesheet">
+      <link href="../public/css/admin.css" rel="stylesheet">
       <script src="public/js/main.js"></script>
       <script scr="public/js/jquery.min.js"></script>
   </head>
