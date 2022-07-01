@@ -102,12 +102,12 @@ if (!isset($_SESSION["user"])) {
               <table class="table table-striped table-hover table-bordered">
                 <thead>
                   <tr>
-                      <th width="10px">No</th>
-                      <th width="10px">No Agenda</th>
-                      <th width="10px">Tanggal Agenda</th>
-                      <th width="10px">Tingkat Keamanan</th>
-                      <th width="10px">Tanggal Surat</th>
-                      <th width="10px">No Surat</th>
+                      <th style="width:30px;">No</th>
+                      <th>No Agenda</th>
+                      <th>Tanggal Agenda</th>
+                      <th>Tingkat Keamanan</th>
+                      <th>Tanggal Surat</th>
+                      <th>No Surat</th>
                       <th>Asal Surat</th>
                       <th>Perihal</th>
                       <th>Lampiran</th>
@@ -172,7 +172,7 @@ if (!isset($_SESSION["user"])) {
                     <tr style="background-color:#FFC07C;color:#994F01;">
                     <?php } else { ?>
                     <tr><?php } ?>
-                        <td><?=$noUrut++?></td>
+                        <td style="width:30px;"><?=$noUrut++?></td>
                         <td><?=$noAgenda?></td>
                         <td><?=$tglAgenda?></td>
                         <td><?=$tk?></td>
