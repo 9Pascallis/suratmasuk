@@ -239,9 +239,10 @@ $(document).ready(function(){
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group row">
-                        <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen</label>
+                        <label for="colFormLabel" class="col-sm-2 col-form-label">Dokumen </label>
                         <div class="col-sm-9">
                         <div class="custom-file">
+                            <div><?= $mhs["file_pdf"]; ?></div>
                             <input type="file" class="form-control" name="file_pdf" id="formFile" placeholder="" src="file_pdf" value="<?= $mhs["file_pdf"]; ?>">
                         </div>
                         </div>
